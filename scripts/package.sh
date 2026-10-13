@@ -24,7 +24,7 @@ mkdir -p "$DIST"
 
 (
 	cd "$DIST"
-	sha256sum ./*.zip > SHA256SUMS
+	sha256sum endpoint-*.zip > SHA256SUMS
 )
 
 cat > "$DIST/RELEASE.txt" <<EOF
