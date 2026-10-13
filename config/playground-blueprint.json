@@ -1,0 +1,26 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "phpExtensionBundles": ["kitchen-sink"],
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "activatePlugin",
+      "pluginPath": "/wordpress/wp-content/plugins/endpoint-core/endpoint-core.php"
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "endpoint"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-content/preview-fixtures/seed-preview.php';"
+    }
+  ]
+}

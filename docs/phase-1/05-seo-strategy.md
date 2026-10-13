@@ -100,7 +100,7 @@ clusters, not instructions to publish one page per phrase:
 | ICT supplies | computers, laptops, printers, storage, licences, office electronics, projectors, smart displays, monitors, peripherals | Product taxonomy, not dozens of static service pages; index only useful populated categories with current availability policy |
 
 Keyword research must distinguish “sales,” “supplier,” “installation,” “repair,”
-“configuration,” “support,” and “consulting.” Do not target an intent that Edgepoint
+“configuration,” “support,” and “consulting.” Do not target an intent that Endpoint
 does not actually fulfil. Named brands may appear in titles or body copy only when
 products/services are genuine and trademark wording is accurate.
 

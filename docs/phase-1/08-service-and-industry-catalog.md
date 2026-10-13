@@ -60,7 +60,7 @@ already exist as products until demonstrated.
 - Fiber internet installation
 - Wi-Fi hotspot solutions
 
-Verification focus: whether Edgepoint is an ISP, reseller, installer, or integrator;
+Verification focus: whether Endpoint is an ISP, reseller, installer, or integrator;
 actual coverage; upstream providers; speeds/contention; equipment; installation;
 recurring billing; service levels; and communications licensing responsibilities.
 
@@ -267,7 +267,7 @@ The following are approved **target audiences**, not claims of past experience:
 - SMEs
 - Homes and residential estates
 
-Create an indexable industry page only after Edgepoint can provide distinct
+Create an indexable industry page only after Endpoint can provide distinct
 customer needs, applicable services, compliance/context, delivery process, FAQs,
 and preferably approved evidence for that market. Until then, show the audiences as
 non-claiming pathways on the Industries index, such as “Solutions for schools,” not

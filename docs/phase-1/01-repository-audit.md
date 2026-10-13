@@ -25,14 +25,24 @@ business references. Their lists are approved planning scope, but are not eviden
 for delivery capacity, prices, addresses, stock, licences, accreditations, industry
 experience, or outcomes.
 
-## Verified inputs
+## Verified inputs and later confirmations
 
-- Legal/company name: **Edgepoint Internet Solutions Ltd**.
+- Initial brief name: **Edgepoint Internet Solutions Ltd**.
+- Client-confirmed display name on 2026-10-13:
+  **Endpoint Internet Solution**. Legal registration wording remains unverified.
 - Public website URL supplied by client:
   `https://edgepoint-internet.com/`.
 - Platform and delivery model: WordPress on shared cPanel hosting; installable
   theme and companion-plugin ZIP files.
 - Geographic priorities: Kasarani, Nairobi County, Greater Nairobi, then Kenya.
+- Confirmed office wording: **Counter Business Center, Shop B08, Kasarani,
+  Nairobi**. This must still be checked against postal/map/Google Business Profile
+  records before production schema or directions are published.
+- Confirmed stated service areas: Kasarani, Nairobi, Ruiru, Gwakairu, and surrounding
+  Nairobi metropolitan areas.
+- Client stated 24/7 availability. This may appear in the preview, but production
+  wording must distinguish office, sales, emergency, and support availability and
+  identify a monitored channel.
 - The 12 service families listed in the brief are approved for planning:
   connectivity; networking; Wi-Fi; Starlink; CCTV/security; software/web
   development; cloud; cybersecurity; ICT equipment/supplies; telecommunications;
@@ -47,12 +57,12 @@ experience, or outcomes.
 
 ### Identity, contact, and local presence
 
-- Exact registered name styling and company registration details, if they are to
-  appear publicly.
+- Exact legal registration wording and whether it differs from the confirmed display
+  name.
 - Primary telephone/WhatsApp numbers, monitored email addresses, business hours,
   and quotation recipient(s).
-- Whether Edgepoint has a staffed, customer-facing physical location; its exact
-  address and map coordinates if so.
+- Map coordinates, postal format, customer access details, and Google verification
+  for the confirmed Counter Business Center office.
 - Actual service area and travel constraints. Kasarani targeting must describe a
   genuine service area, not imply an unverified office.
 - Google Business Profile ownership, canonical name/address/phone data, and profile
@@ -86,7 +96,7 @@ experience, or outcomes.
 - Whether online payment or ecommerce is required. It is not assumed in Phase 1.
 - Industries actually served and whether industry-specific evidence exists.
 - Whether sector systems (school, hospital, SACCO, HR/payroll, inventory, ERP) are
-  existing Edgepoint products, third-party implementations, or custom-build
+  existing Endpoint products, third-party implementations, or custom-build
   capabilities, including ownership, security, support, and compliance boundaries.
 - Existing support process, escalation contacts, and ticketing needs.
 

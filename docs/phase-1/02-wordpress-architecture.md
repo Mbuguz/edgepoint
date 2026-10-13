@@ -18,9 +18,9 @@ Source tooling runs only in development/CI.
 ## Repository layout
 
 ```text
-edgepoint/
+endpoint/
 ├── app/
-│   ├── themes/edgepoint/
+│   ├── themes/endpoint/
 │   │   ├── assets/{src,dist}/
 │   │   ├── inc/
 │   │   ├── parts/
@@ -30,11 +30,11 @@ edgepoint/
 │   │   ├── style.css
 │   │   ├── theme.json
 │   │   └── readme.txt
-│   └── plugins/edgepoint-core/
+│   └── plugins/endpoint-core/
 │       ├── assets/
 │       ├── includes/{Admin,Content,Forms,Integrations,Seo,Support}/
 │       ├── templates/
-│       ├── edgepoint-core.php
+│       ├── endpoint-core.php
 │       ├── uninstall.php
 │       └── readme.txt
 ├── config/                 # PHPCS/PHPStan/test configuration
@@ -48,7 +48,7 @@ edgepoint/
 ```
 
 Final naming is subject to a collision check in the WordPress ecosystem. Use the
-`edgepoint_` function/option/meta prefix and `Edgepoint\` PHP namespace.
+`endpoint_` function/option/meta prefix and `Endpoint\` PHP namespace.
 
 ## Theme responsibilities
 
@@ -69,7 +69,7 @@ core APIs, escape at output, and remain useful with JavaScript disabled.
 
 ## Companion plugin responsibilities
 
-`edgepoint-core` owns:
+`endpoint-core` owns:
 
 - content type and taxonomy registration;
 - custom metadata definitions, REST exposure only where required, and editor panels;
@@ -97,7 +97,7 @@ Open Graph, and schema to prevent conflicts.
   and schema.
 - No template performs direct SQL. Use `WP_Query`, metadata APIs, taxonomies, and
   `$wpdb->prepare()` only when a core API cannot satisfy the query.
-- All strings are translation-ready with the `edgepoint` or `edgepoint-core` text
+- All strings are translation-ready with the `endpoint` or `endpoint-core` text
   domain.
 
 ## Editing strategy
@@ -167,14 +167,14 @@ recorded before implementation.
   installation, bulk user management, or raw integration credentials.
 - Authors: draft insights only, if required.
 
-Create granular capabilities (`edgepoint_read_enquiries`,
-`edgepoint_manage_enquiries`, `edgepoint_export_enquiries`,
-`edgepoint_manage_settings`) rather than checking role names.
+Create granular capabilities (`endpoint_read_enquiries`,
+`endpoint_manage_enquiries`, `endpoint_export_enquiries`,
+`endpoint_manage_settings`) rather than checking role names.
 
 ## Packaging and lifecycle
 
-- Build reproducibly into `dist/edgepoint-theme-x.y.z.zip` and
-  `dist/edgepoint-core-x.y.z.zip`; exclude source maps, tests, node modules, secrets,
+- Build reproducibly into `dist/endpoint-theme-x.y.z.zip` and
+  `dist/endpoint-core-x.y.z.zip`; exclude source maps, tests, node modules, secrets,
   local configs, and VCS files.
 - Generate checksums and a release manifest with WordPress/PHP compatibility,
   commit SHA, build date, migrations, and rollback notes.

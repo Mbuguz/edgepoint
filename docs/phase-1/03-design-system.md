@@ -91,7 +91,7 @@ error, and high-contrast behavior where relevant.
 ## Page composition
 
 - **Home:** value proposition → service pathways → audiences/industries (verified)
-  → why Edgepoint (evidence) → process → selected projects/insights (when available)
+  → why Endpoint (evidence) → process → selected projects/insights (when available)
   → local service context → quote CTA.
 - **Services index:** “By need” pathways → grouped service families → selected
   cross-service solutions → process → quote CTA. Search/filter is added only if
@@ -112,7 +112,7 @@ error, and high-contrast behavior where relevant.
 - Commission authentic team, installation, equipment, and Nairobi-context imagery
   with releases and alt-text notes. Do not use customer faces, sites, screens, or
   number plates without permission.
-- Stock images, when necessary, must be licensed and not misrepresented as Edgepoint
+- Stock images, when necessary, must be licensed and not misrepresented as Endpoint
   work.
 - Produce AVIF/WebP with JPEG/PNG fallback as required; use responsive `srcset`,
   intrinsic dimensions, focal points, and quality budgets.

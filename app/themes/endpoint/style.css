@@ -1,0 +1,15 @@
+/*
+Theme Name: Endpoint
+Theme URI: https://edgepoint-internet.com/
+Author: Endpoint Internet Solution
+Description: Accessible, performance-focused corporate theme for Endpoint Internet Solution.
+Version: 0.1.0
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.1
+Text Domain: endpoint
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* The production stylesheet is loaded from assets/css/main.css. */
