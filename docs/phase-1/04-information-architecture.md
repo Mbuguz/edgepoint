@@ -47,6 +47,13 @@ separate indexable archives. “Blog” redirects to or consistently resolves as
 “Insights.” Unpopulated sections should remain draft/noindex rather than launch as
 empty archives.
 
+The URLs above are service-family hubs. The expanded
+[service and industry catalog](08-service-and-industry-catalog.md) defines their
+capabilities and target markets. A capability receives a child URL such as
+`/services/networking/fiber-splicing/` only after research and approved content
+show a distinct user need. Otherwise it remains a substantial, linkable section of
+the family page. This prevents a large collection of thin, competing pages.
+
 ## Primary navigation
 
 1. Services (mega menu or compact grouped disclosure after usability testing)
@@ -102,6 +109,8 @@ Do not repeat every product/service as an unstructured link wall.
 | SEO title/meta/canonical/robots | Required release fields |
 | Schema service type/provider/area | Derived from verified data |
 | Owner/reviewer/review date | Required governance |
+| Capability status/delivery model | Required; available, consultation, partner, or unavailable |
+| Parent family and related capabilities | Required for hierarchy and quote routing |
 
 ### Product
 
@@ -116,6 +125,12 @@ and required properties support it; ratings/offers are never invented.
 Industry name, verified customer challenges, relevant services, compliance/context,
 process, evidence/projects, FAQs, CTA, and SEO fields. Publish only when the page
 offers substantial industry-specific value beyond a swapped heading.
+
+The supplied markets—education, healthcare, government, NGOs, hospitality, retail,
+manufacturing, finance, religious organizations, construction, real estate, SMEs,
+and residential—are target audiences, not proof of previous work. The Industries
+index may expose them as customer pathways before dedicated pages qualify, provided
+the wording does not imply existing customers or sector credentials.
 
 ### Project
 
@@ -163,6 +178,9 @@ review → approved → published → scheduled review → update/archive`.
 - Home links to priority service pathways, not every deep URL.
 - Service index links to every published service; each service links to 2–4 genuinely
   related services, relevant products/projects/insights, Contact, and Quote.
+- Service family hubs expose approved capabilities through grouped summaries and
+  anchored navigation. Child capability pages link back to the family and laterally
+  only where the relationship helps the user.
 - Industry pages link to applicable canonical services rather than duplicate them.
 - Insights link contextually to authoritative service pages and other helpful
   articles; reciprocal links are added only when useful.

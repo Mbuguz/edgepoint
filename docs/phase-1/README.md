@@ -20,6 +20,7 @@ requirements.
 5. [Kasarani and Nairobi SEO strategy](05-seo-strategy.md)
 6. [Security, performance, accessibility, and operations](06-quality-standards.md)
 7. [Development roadmap and acceptance criteria](07-roadmap.md)
+8. [Expanded service and industry catalog](08-service-and-industry-catalog.md)
 
 ## Decision principles
 
@@ -36,7 +37,9 @@ requirements.
 
 ## Baseline and review gates
 
-- The repository currently has no application code and no company specification.
+- The repository currently has no application code or standalone company
+  specification file. The initial brief and the client-supplied expanded catalog
+  are the available business planning inputs.
 - The live site is out of scope for inspection or modification in this phase.
 - WordPress 7.1.3 is the current security release on the preparation date. The
   production target is the latest stable, fully patched WordPress at deployment,

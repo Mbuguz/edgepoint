@@ -118,7 +118,7 @@ Open Graph, and schema to prevent conflicts.
 | Type | Storage | Public archive | Notes |
 |---|---|---:|---|
 | Pages | Core pages | No | Home, About, Contact, Quote, legal, landing pages |
-| Services | `ep_service` | Yes (`/services/`) | One canonical detail URL per verified service |
+| Services | Hierarchical `ep_service` | Yes (`/services/`) | Family hubs plus qualifying capability pages; status/delivery model required |
 | Products | `ep_product` | Conditional | Enquiry catalogue, not ecommerce unless approved |
 | Projects | `ep_project` | Conditional | Publish only with evidence/client permission |
 | Industries | `ep_industry` or pages | Conditional | Use only where substantial unique content exists |
@@ -129,6 +129,11 @@ Open Graph, and schema to prevent conflicts.
 
 Portfolio is the presentation/archive label for verified project records; do not
 create duplicate Portfolio and Projects datasets.
+
+Service capabilities that do not qualify for standalone pages remain structured
+sections/child records attached to a family and can still drive cards, quote choices,
+and internal reporting. Draft, unavailable, or unverified capabilities must never
+appear in public navigation, sitemaps, schema, or quote promises.
 
 ## Quotation workflow
 

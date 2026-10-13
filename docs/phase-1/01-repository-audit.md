@@ -18,10 +18,12 @@ Audit performed on 2026-10-13 against `main` at commit `dd50f5b`.
 | Submodules/tags | None |
 | Initial worktree state | Clean |
 
-There is no existing implementation to preserve beyond the README. The Phase 1
-brief supplied with this project is therefore the only available business reference.
-Its service list is treated as approved planning scope, but it is not evidence for
-specific service details, prices, addresses, accreditations, or outcomes.
+There is no existing implementation to preserve beyond the README. No standalone
+company specification was found in the repository. The Phase 1 brief and expanded
+service/industry catalog supplied in this conversation are therefore the available
+business references. Their lists are approved planning scope, but are not evidence
+for delivery capacity, prices, addresses, stock, licences, accreditations, industry
+experience, or outcomes.
 
 ## Verified inputs
 
@@ -35,6 +37,11 @@ specific service details, prices, addresses, accreditations, or outcomes.
   connectivity; networking; Wi-Fi; Starlink; CCTV/security; software/web
   development; cloud; cybersecurity; ICT equipment/supplies; telecommunications;
   ICT consulting/support; digital marketing and related ICT services.
+- The expanded capability list and 13 target markets received on 2026-10-13 are
+  approved for architecture and content planning. See the
+  [service and industry catalog](08-service-and-industry-catalog.md).
+- “Full-service ICT provider” is a proposed positioning direction. Unlimited claims
+  such as “every technology service” are not verified.
 
 ## Must be verified before publication
 
@@ -66,12 +73,21 @@ specific service details, prices, addresses, accreditations, or outcomes.
 - Exact deliverables, customer segments, coverage, exclusions, process, lead times,
   pricing policy, warranties, aftercare, and prerequisite site surveys for each
   service.
+- Which expanded capabilities are currently delivered directly, partner-delivered,
+  planned, or unavailable; named technical owners and evidence of competence.
 - Starlink installer/reseller status and wording permitted by the brand owner.
 - CCTV data-protection responsibilities, retention advice, and equipment warranty.
+- Legal/technical authority for penetration testing, biometrics, electric fencing,
+  alarms, telecommunications, fiber work, and any other regulated or high-risk work.
 - Product catalogue, brands, stock status, specifications, prices, delivery,
   installation, returns, and warranty terms.
+- Reseller/partner status and trademark permissions for Starlink, Google, Microsoft,
+  MikroTik, Ubiquiti, TP-Link, Cisco, Huawei, Meta, and other named platforms.
 - Whether online payment or ecommerce is required. It is not assumed in Phase 1.
 - Industries actually served and whether industry-specific evidence exists.
+- Whether sector systems (school, hospital, SACCO, HR/payroll, inventory, ERP) are
+  existing Edgepoint products, third-party implementations, or custom-build
+  capabilities, including ownership, security, support, and compliance boundaries.
 - Existing support process, escalation contacts, and ticketing needs.
 
 ### Legal, privacy, and measurement

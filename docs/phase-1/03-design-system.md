@@ -7,6 +7,12 @@ precise network geometry, generous space, clear evidence, and human service imag
 It must feel capable and local without resorting to generic glowing-circuit imagery,
 fake dashboards, partner logos, or unsupported “trusted by” statistics.
 
+The breadth of the expanded catalog should be expressed as connected solution
+pathways, not an overwhelming wall of offerings. Use “integrated ICT solutions” as
+the lead message and show how connectivity, infrastructure, systems, security,
+cloud, support, and growth services work together. Avoid unlimited “everything
+technology” claims.
+
 The logo and final brand palette are unavailable. The tokens below are a proposed,
 accessible starting point—not approved brand assets.
 
@@ -87,6 +93,9 @@ error, and high-contrast behavior where relevant.
 - **Home:** value proposition → service pathways → audiences/industries (verified)
   → why Edgepoint (evidence) → process → selected projects/insights (when available)
   → local service context → quote CTA.
+- **Services index:** “By need” pathways → grouped service families → selected
+  cross-service solutions → process → quote CTA. Search/filter is added only if
+  usability testing shows the catalog cannot be scanned efficiently.
 - **Service detail:** breadcrumb → outcome-led H1 → scope → suitable customers →
   deliverables/process → service area and prerequisites → related solutions →
   evidence → visible FAQs → quote CTA.

@@ -19,7 +19,8 @@ unknown.
 
 ### Acceptance
 
-- Every requested service maps to one provisional canonical page.
+- Every requested capability maps to a governed service family; separate capability
+  pages require evidence of distinct intent and substantive approved content.
 - Theme and portable plugin responsibilities are explicit.
 - Unknown business claims are identified and prevented from publication.
 - Quote data flow, roles, retention dependency, and failure handling are defined.
@@ -31,14 +32,17 @@ unknown.
 
 ### Inputs required
 
-Approved identity/contact/coverage, hosting report, brand assets/licences, service
-details, content owners, privacy decisions, integrations, current-site inventory
-if any, and release approvers.
+Approved identity/contact/coverage, hosting report, brand assets/licences, capability
+status and delivery model, sector-system ownership, regulated-work authority,
+content owners, privacy decisions, integrations, current-site inventory if any,
+and release approvers.
 
 ### Work
 
 - Interview stakeholders; approve factual matrix, service boundaries, user journeys,
   target audiences, keyword evidence, competitor/SERP findings, and success metrics.
+- Classify every expanded capability as direct, partner-delivered, planned, or
+  unavailable; verify brand/reseller, stock, licence, and industry-evidence claims.
 - Inventory/migrate existing URLs and content; establish redirects and canonical
   hostname.
 - Confirm PHP/database/cPanel capabilities and staging/recovery method.
@@ -162,13 +166,15 @@ Phase 2 should stop at an approved, tested scaffold and evidence-backed content/
 briefs. It should include:
 
 1. client verification workshop and signed factual/content matrix;
-2. host/staging/current-site technical audit;
-3. analytics/Search Console/GBP and keyword/SERP baseline;
-4. URL/content/redirect inventory;
-5. information-architecture validation and wireframes for Home, Services index,
+2. capability/delivery classification, brand authorization review, and industry
+   evidence matrix;
+3. host/staging/current-site technical audit;
+4. analytics/Search Console/GBP and keyword/SERP baseline;
+5. URL/content/redirect inventory;
+6. information-architecture validation and wireframes for Home, Services index,
    one Service, Products, Project, Insight, Contact, Quote, and Support;
-6. repository scaffold with theme/plugin shells, standards, tests, CI, and ZIP build;
-7. privacy/data-flow decision for quote/support, integrations, and retention.
+7. repository scaffold with theme/plugin shells, standards, tests, CI, and ZIP build;
+8. privacy/data-flow decision for quote/support, integrations, and retention.
 
 Full visual build, production content population, and deployment belong to subsequent
 phases unless separately approved.
