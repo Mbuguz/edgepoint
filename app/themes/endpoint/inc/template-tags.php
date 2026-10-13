@@ -68,6 +68,8 @@ function endpoint_breadcrumbs() {
 	$label = '';
 	if ( is_singular() ) {
 		$label = get_the_title();
+	} elseif ( is_post_type_archive() ) {
+		$label = post_type_archive_title( '', false );
 	} elseif ( is_archive() ) {
 		$label = get_the_archive_title();
 	} elseif ( is_search() ) {
