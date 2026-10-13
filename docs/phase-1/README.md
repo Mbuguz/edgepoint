@@ -1,8 +1,8 @@
 # Phase 1: Production Website Foundation
 
-**Status:** Complete for review  
-**Prepared:** 2026-10-13  
-**Scope:** Architecture and planning only; Phase 2 implementation is explicitly excluded.
+- **Status:** Complete for review
+- **Prepared:** 2026-10-13
+- **Scope:** Architecture and planning only; Phase 2 implementation is explicitly excluded.
 
 ## Purpose
 
