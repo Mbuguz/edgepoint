@@ -19,6 +19,7 @@ final class Endpoint_Core_Content {
 	 */
 	public static function init() {
 		add_action( 'init', array( __CLASS__, 'register' ) );
+		add_action( 'pre_get_posts', array( __CLASS__, 'archive_size' ) );
 	}
 
 	/**
@@ -263,5 +264,21 @@ final class Endpoint_Core_Content {
 		foreach ( $capabilities as $capability ) {
 			$role->add_cap( $capability );
 		}
+	}
+
+	/**
+	 * Keep the complete, intentionally small service family set on one index page.
+	 *
+	 * @param WP_Query $query Current query.
+	 * @return void
+	 */
+	public static function archive_size( $query ) {
+		if ( is_admin() || ! $query->is_main_query() || ! $query->is_post_type_archive( 'endpoint_service' ) ) {
+			return;
+		}
+
+		$query->set( 'posts_per_page', 24 );
+		$query->set( 'orderby', 'menu_order title' );
+		$query->set( 'order', 'ASC' );
 	}
 }

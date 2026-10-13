@@ -12,7 +12,15 @@ get_header();
 <main id="main" class="main-content">
 	<section class="wrap archive-heading">
 		<p class="eyebrow"><?php esc_html_e( 'Endpoint solutions', 'endpoint' ); ?></p>
-		<h1><?php the_archive_title(); ?></h1>
+		<h1>
+			<?php
+			if ( is_post_type_archive() ) {
+				echo esc_html( post_type_archive_title( '', false ) );
+			} else {
+				the_archive_title();
+			}
+			?>
+		</h1>
 		<?php the_archive_description( '<div class="archive-heading__description">', '</div>' ); ?>
 	</section>
 
