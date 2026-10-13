@@ -191,6 +191,8 @@ ol {
 
 .brand__mark {
 	flex: 0 0 2.75rem;
+	height: 2.75rem;
+	width: 2.75rem;
 }
 
 .brand__text {
@@ -732,7 +734,7 @@ ol {
 }
 
 .cta .eyebrow {
-	color: var(--cyan-300);
+	color: var(--white);
 }
 
 .cta p:last-child {
