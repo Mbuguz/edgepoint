@@ -20,7 +20,7 @@
     },
     {
       "step": "runPHP",
-      "code": "<?php require '/wordpress/wp-content/preview-fixtures/seed-preview.php';"
+      "code": "<?php require_once '/wordpress/wp-load.php'; require '/wordpress/wp-content/preview-fixtures/seed-preview.php';"
     }
   ]
 }
