@@ -1,8 +1,8 @@
 # Service and Industry Catalog
 
-**Source:** Client-supplied expansion received 2026-10-13  
-**Status:** Approved for information architecture and content planning; operational
-details and claims still require evidence before publication.
+- **Source:** Client-supplied expansion received 2026-10-13
+- **Status:** Approved for information architecture and content planning; operational
+  details and claims still require evidence before publication.
 
 ## Positioning
 
