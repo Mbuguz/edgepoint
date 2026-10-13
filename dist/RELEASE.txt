@@ -1,0 +1,8 @@
+Endpoint Internet Solution preview release
+Version: 0.1.0
+Commit: cb1f4da
+Mode: PREVIEW ONLY
+
+The phone number, email, social profiles, legal copy, form recipient and final
+service claims must be verified before production. Preview mode intentionally
+adds noindex directives and disables enquiry storage and delivery.
