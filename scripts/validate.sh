@@ -23,7 +23,7 @@ for path in (Path("app/themes/endpoint/theme.json"), Path("config/playground-blu
 PY
 
 if rg -n --glob '*.php' --glob '*.js' --glob '*.css' \
-	'http://|eval\\s*\\(|base64_decode\\s*\\(' app; then
+	'http://|eval\s*\(|base64_decode\s*\(' app; then
 	echo "Unsafe or insecure source pattern found." >&2
 	exit 1
 fi
