@@ -1,0 +1,87 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": false,
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "palette": [
+        { "slug": "midnight", "name": "Midnight", "color": "#071b2b" },
+        { "slug": "signal-blue", "name": "Signal blue", "color": "#075ea8" },
+        { "slug": "cyan", "name": "Cyan", "color": "#63d8e6" },
+        { "slug": "cloud", "name": "Cloud", "color": "#eef5f8" },
+        { "slug": "white", "name": "White", "color": "#ffffff" }
+      ]
+    },
+    "layout": {
+      "contentSize": "48rem",
+      "wideSize": "75rem"
+    },
+    "spacing": {
+      "customSpacingSize": false,
+      "spacingSizes": [
+        { "slug": "20", "name": "XS", "size": "0.5rem" },
+        { "slug": "30", "name": "S", "size": "1rem" },
+        { "slug": "40", "name": "M", "size": "1.5rem" },
+        { "slug": "50", "name": "L", "size": "2rem" },
+        { "slug": "60", "name": "XL", "size": "3rem" },
+        { "slug": "70", "name": "2XL", "size": "4rem" }
+      ],
+      "units": ["px", "rem", "%", "vw"]
+    },
+    "typography": {
+      "customFontSize": false,
+      "dropCap": false,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Manrope\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+          "name": "Edgepoint Manrope",
+          "slug": "edgepoint-sans"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "small", "name": "Small", "size": "0.875rem" },
+        { "slug": "medium", "name": "Medium", "size": "1rem" },
+        { "slug": "large", "name": "Large", "size": "1.25rem" },
+        { "slug": "x-large", "name": "Extra large", "size": "2rem" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#ffffff",
+      "text": "#071b2b"
+    },
+    "spacing": {
+      "blockGap": "1.5rem"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|edgepoint-sans",
+      "fontSize": "1rem",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "button": {
+        "border": {
+          "radius": "0.5rem"
+        },
+        "color": {
+          "background": "#075ea8",
+          "text": "#ffffff"
+        },
+        "typography": {
+          "fontWeight": "700"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#075ea8"
+        }
+      }
+    }
+  }
+}
