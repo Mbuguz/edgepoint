@@ -59,6 +59,31 @@ function edgepoint_phone_href( $phone ) {
 }
 
 /**
+ * Build a WhatsApp chat link from the public phone number.
+ *
+ * @param string $phone Raw phone number.
+ * @return string
+ */
+function edgepoint_whatsapp_href( $phone ) {
+	$digits = preg_replace( '/\D+/', '', (string) $phone );
+	if ( str_starts_with( $digits, '0' ) ) {
+		$digits = '254' . substr( $digits, 1 );
+	}
+
+	return 'https://wa.me/' . $digits . '?text=' . rawurlencode( 'Hello Edgepoint, I would like to ask about your services.' );
+}
+
+/**
+ * Build a map search link for the published office address.
+ *
+ * @param string $address Office address.
+ * @return string
+ */
+function edgepoint_maps_href( $address ) {
+	return 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( (string) $address );
+}
+
+/**
  * Return verified social profiles saved in business settings.
  *
  * @return array<int, array{label: string, url: string}>

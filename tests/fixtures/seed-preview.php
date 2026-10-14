@@ -26,7 +26,7 @@ $pages = array(
 	),
 	'contact'       => array(
 		'title'   => 'Contact',
-		'content' => '<h2>Visit our office</h2><p><strong>Counter Business Center, Shop B08<br>Kasarani, Nairobi</strong></p><p>Service planning covers Kasarani, Nairobi, Ruiru, Gwakairu and surrounding Nairobi metropolitan areas.</p><h2>Call or email</h2><p>Phone: <a href="tel:+254754931100">0754 931 100</a><br>Email: <a href="mailto:edgepointinternet@gmail.com">edgepointinternet@gmail.com</a></p><p>Facebook, TikTok and X links are published from the verified business profile.</p>',
+		'content' => '<h2>Visit our office</h2><p><strong>Counter Business Center, Shop B08<br>Kasarani, Nairobi</strong></p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Counter%20Business%20Center%20Shop%20B08%20Kasarani%20Nairobi">Get directions</a></p><p>Service planning covers Kasarani, Nairobi, Ruiru, Gwakairu and surrounding Nairobi metropolitan areas.</p><h2>Call, WhatsApp, or email</h2><p>Phone: <a href="tel:+254754931100">0754 931 100</a><br>WhatsApp: <a href="https://wa.me/254754931100">Chat on WhatsApp</a><br>Email: <a href="mailto:edgepointinternet@gmail.com">edgepointinternet@gmail.com</a></p><p>Facebook, TikTok and X links are on this website.</p>',
 	),
 	'get-a-quote'   => array(
 		'title'   => 'Get a Quote',

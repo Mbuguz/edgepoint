@@ -352,7 +352,7 @@ $industries = array(
 			<div class="local-card__address">
 				<span><?php esc_html_e( 'Visit our office', 'edgepoint' ); ?></span>
 				<strong><?php echo esc_html( edgepoint_business_detail( 'address' ) ); ?></strong>
-				<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Plan a visit', 'edgepoint' ); ?> <span aria-hidden="true">→</span></a>
+				<a href="<?php echo esc_url( edgepoint_maps_href( edgepoint_business_detail( 'address' ) ) ); ?>"><?php esc_html_e( 'Get directions', 'edgepoint' ); ?> <span aria-hidden="true">→</span></a>
 			</div>
 		</div>
 	</section>
