@@ -143,16 +143,24 @@ $industries = array(
 					<a class="button button--ghost-light" href="<?php echo esc_url( home_url( '/get-a-quote/' ) ); ?>"><?php esc_html_e( 'Plan a solution', 'endpoint' ); ?></a>
 				</div>
 			</div>
-			<div class="hero-visual" aria-hidden="true" data-reveal>
+			<div class="hero-visual" data-reveal>
 				<div class="hero-visual__orbit hero-visual__orbit--one"></div>
 				<div class="hero-visual__orbit hero-visual__orbit--two"></div>
+				<div class="hero-visual__photo">
+					<img
+						src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/connectivity-installation.jpg' ); ?>"
+						width="1280"
+						height="720"
+						alt="<?php esc_attr_e( 'ICT engineer testing network cabling in a modern office', 'endpoint' ); ?>"
+					>
+				</div>
 				<div class="hero-visual__core">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-mark.svg' ); ?>" width="88" height="88" alt="">
 				</div>
-				<span class="hero-visual__node hero-visual__node--a"></span>
-				<span class="hero-visual__node hero-visual__node--b"></span>
-				<span class="hero-visual__node hero-visual__node--c"></span>
-				<span class="hero-visual__node hero-visual__node--d"></span>
+				<span class="hero-visual__node hero-visual__node--a" aria-hidden="true"></span>
+				<span class="hero-visual__node hero-visual__node--b" aria-hidden="true"></span>
+				<span class="hero-visual__node hero-visual__node--c" aria-hidden="true"></span>
+				<span class="hero-visual__node hero-visual__node--d" aria-hidden="true"></span>
 				<div class="signal-card signal-card--network"><span></span><?php esc_html_e( 'Network ready', 'endpoint' ); ?></div>
 				<div class="signal-card signal-card--secure"><span></span><?php esc_html_e( 'Secure by design', 'endpoint' ); ?></div>
 				<div class="signal-card signal-card--scale"><span></span><?php esc_html_e( 'Built to evolve', 'endpoint' ); ?></div>
@@ -196,6 +204,24 @@ $industries = array(
 					</ul>
 				</article>
 			<?php endforeach; ?>
+		</div>
+		<div class="wrap digital-feature">
+			<div data-reveal>
+				<p class="eyebrow"><?php esc_html_e( 'Physical and digital, planned together', 'endpoint' ); ?></p>
+				<h3><?php esc_html_e( 'The network, cloud and software should strengthen each other.', 'endpoint' ); ?></h3>
+				<p><?php esc_html_e( 'Endpoint connects infrastructure decisions with the systems and people that depend on them—reducing hand-offs and avoiding technology that works only in isolation.', 'endpoint' ); ?></p>
+				<a class="text-link" href="<?php echo esc_url( home_url( '/services/software-website-development/' ) ); ?>"><?php esc_html_e( 'Explore software and digital systems', 'endpoint' ); ?> <span aria-hidden="true">↗</span></a>
+			</div>
+			<figure data-reveal>
+				<img
+					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/software-cloud-team.jpg' ); ?>"
+					width="1280"
+					height="720"
+					loading="lazy"
+					alt="<?php esc_attr_e( 'Technology team collaborating around laptops in a bright workspace', 'endpoint' ); ?>"
+				>
+				<figcaption><?php esc_html_e( 'Demonstrative image; not an Endpoint employee or customer project.', 'endpoint' ); ?></figcaption>
+			</figure>
 		</div>
 	</section>
 

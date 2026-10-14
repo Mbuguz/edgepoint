@@ -9,6 +9,10 @@
 - Stated availability: 24/7, pending a verified monitored contact channel and
   service-level wording
 - Logo direction: clean and professional
+- Approved visual direction: sky blue and white, with deep navy reserved for
+  readable text and contrast
+- Demonstrative service imagery: allowed where appropriate; stock/generated images
+  must not be represented as Endpoint staff, offices, customers, or projects
 - Contact number and social profiles: preview placeholders until supplied
 
 The repository/domain retain their existing `edgepoint` spelling. The public display

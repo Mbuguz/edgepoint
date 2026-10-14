@@ -17,6 +17,17 @@ employee, customer site, project, or facility.
 - Created for this repository
 - Licence: included with the theme under GPL-2.0-or-later
 
+## Endpoint demonstrative service images
+
+- Files: `assets/images/connectivity-installation.jpg` and
+  `assets/images/software-cloud-team.jpg`
+- Generated specifically for this repository
+- Licence: included with the theme under GPL-2.0-or-later
+
+These are demonstrative images, not photographs of Endpoint employees, customers,
+offices, or completed projects. Replace them with approved authentic project
+photography when available.
+
 ## Manrope variable font
 
 - File: `assets/fonts/manrope-latin.woff2`
