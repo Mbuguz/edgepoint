@@ -2746,3 +2746,124 @@ ol {
 		width: 46%;
 	}
 }
+
+.insights-page .post-grid {
+	align-items: stretch;
+	gap: 1.35rem;
+}
+
+.post-card__kicker time {
+	color: var(--ink-500);
+	font-weight: 650;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.post-card--lead {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
+}
+
+.post-card--lead .post-card__image {
+	aspect-ratio: auto;
+	min-height: 22rem;
+}
+
+.post-card--lead .post-card__body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: clamp(1.6rem, 4vw, 3.2rem);
+}
+
+.post-card--lead h2 {
+	font-size: clamp(1.85rem, 3vw, 2.85rem);
+	letter-spacing: -0.04em;
+	line-height: 1.05;
+}
+
+.post-card--note {
+	border-top: 0.28rem solid var(--sky-500);
+}
+
+.post-card__image img {
+	transition: transform 500ms ease;
+}
+
+.post-card:hover .post-card__image img {
+	transform: scale(1.04);
+}
+
+.insight-entry {
+	background:
+		radial-gradient(circle at 80% 0%, rgb(125 210 255 / 42%), transparent 22rem),
+		linear-gradient(180deg, var(--sky-100), var(--white) 22rem);
+	padding-top: 0;
+}
+
+.insight-entry__header {
+	padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.insight-entry__back {
+	margin: 0 0 1.1rem;
+}
+
+.insight-entry__back a {
+	color: var(--sky-700);
+	font-size: 0.78rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.insight-entry__header h1 {
+	letter-spacing: -0.045em;
+	line-height: 1.02;
+}
+
+.insight-entry__figure {
+	margin-bottom: clamp(1.8rem, 4vw, 3rem);
+}
+
+.insight-entry__figure img {
+	border-radius: 1.25rem;
+	box-shadow: 0 24px 60px rgb(0 89 134 / 16%);
+	display: block;
+	height: auto;
+	max-height: 38rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.insight-entry .entry__content {
+	font-size: 1.08rem;
+	line-height: 1.7;
+}
+
+.insight-entry .entry__content h2 {
+	letter-spacing: -0.03em;
+}
+
+@media (max-width: 68rem) {
+	.post-card--lead {
+		grid-template-columns: 1fr;
+	}
+
+	.post-card--lead .post-card__image {
+		aspect-ratio: 16 / 10;
+		min-height: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.post-card__image img {
+		transition: none;
+	}
+
+	.post-card:hover .post-card__image img {
+		transform: none;
+	}
+}

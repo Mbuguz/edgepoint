@@ -14,6 +14,7 @@ $trends_term  = get_category_by_slug( 'trends' );
 $is_trends    = is_category( 'trends' );
 $is_insights  = is_home() || is_category();
 $shown        = 0;
+$lead_used    = false;
 ?>
 <main id="main" class="main-content<?php echo $is_insights ? ' insights-page' : ''; ?>">
 	<section class="wrap archive-heading">
@@ -62,19 +63,37 @@ $shown        = 0;
 				}
 				++$shown;
 				$is_trend = edgepoint_is_trend();
+				$is_lead  = $is_insights && ! is_paged() && ! $lead_used && has_post_thumbnail();
+				if ( $is_lead ) {
+					$lead_used = true;
+				}
+				$card_class = 'post-card';
+				if ( $is_trend ) {
+					$card_class .= ' post-card--trend';
+				}
+				if ( $is_lead ) {
+					$card_class .= ' post-card--lead';
+				} elseif ( ! has_post_thumbnail() ) {
+					$card_class .= ' post-card--note';
+				}
 				?>
-				<article <?php post_class( $is_trend ? 'post-card post-card--trend' : 'post-card' ); ?>>
+				<article <?php post_class( $card_class ); ?>>
 					<?php if ( has_post_thumbnail() ) : ?>
 						<a class="post-card__image" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true">
-							<?php the_post_thumbnail( 'edgepoint-card' ); ?>
+							<?php the_post_thumbnail( $is_lead ? 'large' : 'edgepoint-card' ); ?>
 						</a>
 					<?php endif; ?>
 					<div class="post-card__body">
-						<?php if ( $is_trend ) : ?>
-							<p class="post-card__kicker"><?php esc_html_e( 'Trend', 'edgepoint' ); ?></p>
-						<?php else : ?>
-							<p class="entry__meta"><?php echo esc_html( get_the_date() ); ?></p>
-						<?php endif; ?>
+						<p class="post-card__kicker">
+							<?php if ( $is_trend ) : ?>
+								<?php esc_html_e( 'Trend', 'edgepoint' ); ?>
+								<span aria-hidden="true"> · </span>
+							<?php else : ?>
+								<?php esc_html_e( 'Insight', 'edgepoint' ); ?>
+								<span aria-hidden="true"> · </span>
+							<?php endif; ?>
+							<time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
+						</p>
 						<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<p><?php echo esc_html( wp_trim_words( get_the_excerpt(), 24 ) ); ?></p>
 						<a href="<?php the_permalink(); ?>"><?php echo $is_trend ? esc_html__( 'Read trend', 'edgepoint' ) : esc_html__( 'Read article', 'edgepoint' ); ?> <span aria-hidden="true">→</span></a>
