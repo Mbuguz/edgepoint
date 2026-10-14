@@ -248,25 +248,68 @@ final class Edgepoint_Core_Enquiry {
 		}
 
 		$delivered = false;
+		$mail_note = '';
 		if ( is_email( $settings['quote_email'] ) ) {
-			$subject   = sprintf(
+			$subject = sprintf(
 				/* translators: %s: enquiry reference. */
 				__( 'New Edgepoint quote request %s', 'edgepoint-core' ),
 				$reference
 			);
-			$message   = sprintf(
-				/* translators: 1: reference, 2: name, 3: service, 4: location. */
-				__( "Reference: %1\$s\nName: %2\$s\nService: %3\$s\nLocation: %4\$s\n\nSign in to WordPress to review the full request.", 'edgepoint-core' ),
+			$message = sprintf(
+				/* translators: 1: reference, 2: name, 3: service, 4: location, 5: phone, 6: email, 7: requirements. */
+				__( "Reference: %1\$s\nName: %2\$s\nService: %3\$s\nLocation: %4\$s\nPhone: %5\$s\nEmail: %6\$s\n\n%7\$s\n\nSign in to WordPress to review the request.", 'edgepoint-core' ),
 				$reference,
 				$name,
 				$services[ $service ],
-				$location
+				$location,
+				$phone,
+				$email,
+				$requirements
 			);
-			$delivered = wp_mail( $settings['quote_email'], $subject, $message );
+			$mail_failure = '';
+			$capture_failure = static function ( $error ) use ( &$mail_failure ) {
+				if ( is_wp_error( $error ) ) {
+					$mail_failure = $error->get_error_message();
+				}
+			};
+			add_action( 'wp_mail_failed', $capture_failure );
+			try {
+				$delivered = (bool) wp_mail( $settings['quote_email'], $subject, $message );
+			} catch ( \Throwable $exception ) {
+				$delivered = false;
+				$mail_failure = $exception->getMessage();
+			}
+			remove_action( 'wp_mail_failed', $capture_failure );
+			if ( $mail_failure ) {
+				$mail_note = self::explain_mail_failure( $mail_failure );
+			}
+		} else {
+			$mail_note = 'Quote recipient email is missing.';
 		}
 		update_post_meta( $post_id, '_edgepoint_delivery_status', $delivered ? 'sent' : 'pending' );
+		if ( $mail_note ) {
+			update_post_meta( $post_id, '_edgepoint_mail_error', $mail_note );
+		}
 
 		self::redirect( $redirect, 'success', $reference );
+	}
+
+	/**
+	 * Explain a mail failure in admin without hiding the saved enquiry.
+	 *
+	 * @param string $message Raw mailer error.
+	 * @return string
+	 */
+	private static function explain_mail_failure( $message ) {
+		if ( str_contains( $message, 'PHPMailer' ) && str_contains( $message, 'mail' ) ) {
+			return __( 'Saved in WordPress. Email was not sent because this hosting account has disabled PHP mail().', 'edgepoint-core' );
+		}
+
+		return sprintf(
+			/* translators: %s: mailer error message. */
+			__( 'Saved in WordPress. Email was not sent: %s', 'edgepoint-core' ),
+			$message
+		);
 	}
 
 	/**
@@ -325,6 +368,7 @@ final class Edgepoint_Core_Enquiry {
 			'privacy_acknowledged' => __( 'Privacy acknowledgement', 'edgepoint-core' ),
 			'status'               => __( 'Status', 'edgepoint-core' ),
 			'delivery_status'      => __( 'Notification', 'edgepoint-core' ),
+			'mail_error'           => __( 'Mail result', 'edgepoint-core' ),
 		);
 		?>
 		<table class="widefat striped">
