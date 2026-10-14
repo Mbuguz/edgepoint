@@ -2,7 +2,7 @@
 /**
  * Reusable display helpers.
  *
- * @package Endpoint
+ * @package Edgepoint
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,16 +13,16 @@ defined( 'ABSPATH' ) || exit;
  * @param string $key Business detail key.
  * @return string
  */
-function endpoint_business_detail( $key ) {
+function edgepoint_business_detail( $key ) {
 	$defaults = array(
-		'name'         => 'Endpoint Internet Solution',
+		'name'         => 'Edgepoint Internets Solutions Ltd',
 		'phone'        => '+254 700 000 000',
 		'email'        => 'hello@example.com',
 		'address'      => 'Counter Business Center, Shop B08, Kasarani, Nairobi',
 		'service_area' => 'Kasarani, Nairobi, Ruiru, Gwakairu and the surrounding Nairobi metropolitan area',
 		'hours'        => '24/7',
 	);
-	$details  = get_option( 'endpoint_business_details', array() );
+	$details  = get_option( 'edgepoint_business_details', array() );
 	$value    = isset( $details[ $key ] ) ? $details[ $key ] : ( $defaults[ $key ] ?? '' );
 
 	return is_scalar( $value ) ? (string) $value : '';
@@ -33,7 +33,7 @@ function endpoint_business_detail( $key ) {
  *
  * @return void
  */
-function endpoint_brand() {
+function edgepoint_brand() {
 	if ( has_custom_logo() ) {
 		the_custom_logo();
 		return;
@@ -48,8 +48,8 @@ function endpoint_brand() {
 			alt=""
 		/>
 		<span class="brand__text">
-			<strong><?php echo esc_html( endpoint_business_detail( 'name' ) ); ?></strong>
-			<small><?php esc_html_e( 'Connect. Secure. Grow.', 'endpoint' ); ?></small>
+			<strong><?php echo esc_html( edgepoint_business_detail( 'name' ) ); ?></strong>
+			<small><?php esc_html_e( 'Connect. Secure. Grow.', 'edgepoint' ); ?></small>
 		</span>
 	</a>
 	<?php
@@ -60,7 +60,7 @@ function endpoint_brand() {
  *
  * @return void
  */
-function endpoint_breadcrumbs() {
+function edgepoint_breadcrumbs() {
 	if ( is_front_page() ) {
 		return;
 	}
@@ -73,18 +73,18 @@ function endpoint_breadcrumbs() {
 	} elseif ( is_archive() ) {
 		$label = get_the_archive_title();
 	} elseif ( is_search() ) {
-		$label = __( 'Search results', 'endpoint' );
+		$label = __( 'Search results', 'edgepoint' );
 	} elseif ( is_404() ) {
-		$label = __( 'Page not found', 'endpoint' );
+		$label = __( 'Page not found', 'edgepoint' );
 	}
 
 	if ( ! $label ) {
 		return;
 	}
 	?>
-	<nav class="breadcrumbs wrap" aria-label="<?php esc_attr_e( 'Breadcrumb', 'endpoint' ); ?>">
+	<nav class="breadcrumbs wrap" aria-label="<?php esc_attr_e( 'Breadcrumb', 'edgepoint' ); ?>">
 		<ol>
-			<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'endpoint' ); ?></a></li>
+			<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'edgepoint' ); ?></a></li>
 			<li aria-current="page"><?php echo esc_html( wp_strip_all_tags( $label ) ); ?></li>
 		</ol>
 	</nav>
@@ -97,7 +97,7 @@ function endpoint_breadcrumbs() {
  * @param string $name Icon name.
  * @return string
  */
-function endpoint_icon( $name ) {
+function edgepoint_icon( $name ) {
 	$paths = array(
 		'connectivity' => '<path d="M4 13a11 11 0 0 1 16 0M7.5 16.5a6 6 0 0 1 9 0M11.8 20h.4"/>',
 		'network'      => '<rect x="3" y="4" width="7" height="6" rx="1"/><rect x="14" y="14" width="7" height="6" rx="1"/><path d="M10 7h4a3 3 0 0 1 3 3v4M7 10v7h7"/>',

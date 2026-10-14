@@ -17,7 +17,7 @@ python3 - <<'PY'
 from pathlib import Path
 import json
 
-for path in (Path("app/themes/endpoint/theme.json"), Path("config/playground-blueprint.json")):
+for path in (Path("app/themes/edgepoint/theme.json"), Path("config/playground-blueprint.json")):
     json.loads(path.read_text())
     print(f"JSON OK: {path}")
 PY

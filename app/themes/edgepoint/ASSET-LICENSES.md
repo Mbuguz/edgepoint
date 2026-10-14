@@ -9,16 +9,16 @@
 - Licence: [Unsplash License](https://unsplash.com/license)
 - Downloaded: 2026-10-13
 
-The image is contextual stock photography and must not be described as an Endpoint
+The image is contextual stock photography and must not be described as an Edgepoint
 employee, customer site, project, or facility.
 
-## Endpoint logo mark
+## Edgepoint logo mark
 
 - File: `assets/images/logo-mark.svg`
 - Created for this repository
 - Licence: included with the theme under GPL-2.0-or-later
 
-## Endpoint demonstrative service images
+## Edgepoint demonstrative service images
 
 - Files: `assets/images/connectivity-installation.jpg` and
   `assets/images/software-cloud-team.jpg`
@@ -26,7 +26,7 @@ employee, customer site, project, or facility.
 - Generated specifically for this repository
 - Licence: included with the theme under GPL-2.0-or-later
 
-These are demonstrative images, not photographs of Endpoint employees, customers,
+These are demonstrative images, not photographs of Edgepoint employees, customers,
 offices, or completed projects. Replace them with approved authentic project
 photography when available.
 

@@ -2,7 +2,7 @@
 /**
  * Portable content models.
  *
- * @package EndpointCore
+ * @package EdgepointCore
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Register public content and private enquiries.
  */
-final class Endpoint_Core_Content {
+final class Edgepoint_Core_Content {
 
 	/**
 	 * Attach hooks.
@@ -35,48 +35,48 @@ final class Endpoint_Core_Content {
 			'singular_name'      => $singular,
 			'add_new_item'       => sprintf(
 				/* translators: %s: content type singular label. */
-				__( 'Add new %s', 'endpoint-core' ),
+				__( 'Add new %s', 'edgepoint-core' ),
 				$singular
 			),
 			'edit_item'          => sprintf(
 				/* translators: %s: content type singular label. */
-				__( 'Edit %s', 'endpoint-core' ),
+				__( 'Edit %s', 'edgepoint-core' ),
 				$singular
 			),
 			'new_item'           => sprintf(
 				/* translators: %s: content type singular label. */
-				__( 'New %s', 'endpoint-core' ),
+				__( 'New %s', 'edgepoint-core' ),
 				$singular
 			),
 			'view_item'          => sprintf(
 				/* translators: %s: content type singular label. */
-				__( 'View %s', 'endpoint-core' ),
+				__( 'View %s', 'edgepoint-core' ),
 				$singular
 			),
 			'search_items'       => sprintf(
 				/* translators: %s: content type plural label. */
-				__( 'Search %s', 'endpoint-core' ),
+				__( 'Search %s', 'edgepoint-core' ),
 				$plural
 			),
 			'not_found'          => sprintf(
 				/* translators: %s: content type plural label. */
-				__( 'No %s found', 'endpoint-core' ),
+				__( 'No %s found', 'edgepoint-core' ),
 				strtolower( $plural )
 			),
 			'all_items'          => sprintf(
 				/* translators: %s: content type plural label. */
-				__( 'All %s', 'endpoint-core' ),
+				__( 'All %s', 'edgepoint-core' ),
 				$plural
 			),
 			'menu_name'          => $plural,
 			'item_published'     => sprintf(
 				/* translators: %s: content type singular label. */
-				__( '%s published.', 'endpoint-core' ),
+				__( '%s published.', 'edgepoint-core' ),
 				$singular
 			),
 			'item_updated'       => sprintf(
 				/* translators: %s: content type singular label. */
-				__( '%s updated.', 'endpoint-core' ),
+				__( '%s updated.', 'edgepoint-core' ),
 				$singular
 			),
 		);
@@ -89,9 +89,9 @@ final class Endpoint_Core_Content {
 	 */
 	public static function register() {
 		register_post_type(
-			'endpoint_service',
+			'edgepoint_service',
 			array(
-				'labels'       => self::labels( __( 'Service', 'endpoint-core' ), __( 'Services', 'endpoint-core' ) ),
+				'labels'       => self::labels( __( 'Service', 'edgepoint-core' ), __( 'Services', 'edgepoint-core' ) ),
 				'public'       => true,
 				'hierarchical' => true,
 				'has_archive'  => 'services',
@@ -106,9 +106,9 @@ final class Endpoint_Core_Content {
 		);
 
 		register_post_type(
-			'endpoint_product',
+			'edgepoint_product',
 			array(
-				'labels'       => self::labels( __( 'Product', 'endpoint-core' ), __( 'Products', 'endpoint-core' ) ),
+				'labels'       => self::labels( __( 'Product', 'edgepoint-core' ), __( 'Products', 'edgepoint-core' ) ),
 				'public'       => true,
 				'has_archive'  => 'products',
 				'rewrite'      => array(
@@ -122,9 +122,9 @@ final class Endpoint_Core_Content {
 		);
 
 		register_post_type(
-			'endpoint_project',
+			'edgepoint_project',
 			array(
-				'labels'       => self::labels( __( 'Project', 'endpoint-core' ), __( 'Projects', 'endpoint-core' ) ),
+				'labels'       => self::labels( __( 'Project', 'edgepoint-core' ), __( 'Projects', 'edgepoint-core' ) ),
 				'public'       => true,
 				'has_archive'  => 'projects',
 				'rewrite'      => array(
@@ -138,9 +138,9 @@ final class Endpoint_Core_Content {
 		);
 
 		register_post_type(
-			'endpoint_industry',
+			'edgepoint_industry',
 			array(
-				'labels'       => self::labels( __( 'Industry', 'endpoint-core' ), __( 'Industries', 'endpoint-core' ) ),
+				'labels'       => self::labels( __( 'Industry', 'edgepoint-core' ), __( 'Industries', 'edgepoint-core' ) ),
 				'public'       => true,
 				'has_archive'  => 'industries',
 				'rewrite'      => array(
@@ -154,28 +154,28 @@ final class Endpoint_Core_Content {
 		);
 
 		register_post_type(
-			'endpoint_enquiry',
+			'edgepoint_enquiry',
 			array(
-				'labels'              => self::labels( __( 'Enquiry', 'endpoint-core' ), __( 'Enquiries', 'endpoint-core' ) ),
+				'labels'              => self::labels( __( 'Enquiry', 'edgepoint-core' ), __( 'Enquiries', 'edgepoint-core' ) ),
 				'public'              => false,
 				'show_ui'             => true,
 				'show_in_menu'        => true,
 				'menu_icon'           => 'dashicons-email-alt',
 				'exclude_from_search' => true,
 				'show_in_rest'        => false,
-				'capability_type'     => array( 'endpoint_enquiry', 'endpoint_enquiries' ),
+				'capability_type'     => array( 'edgepoint_enquiry', 'edgepoint_enquiries' ),
 				'map_meta_cap'        => true,
 				'supports'            => array( 'title' ),
 			)
 		);
 
 		register_taxonomy(
-			'endpoint_solution',
-			array( 'endpoint_service', 'endpoint_product', 'endpoint_project', 'endpoint_industry' ),
+			'edgepoint_solution',
+			array( 'edgepoint_service', 'edgepoint_product', 'edgepoint_project', 'edgepoint_industry' ),
 			array(
 				'labels'            => array(
-					'name'          => __( 'Solution areas', 'endpoint-core' ),
-					'singular_name' => __( 'Solution area', 'endpoint-core' ),
+					'name'          => __( 'Solution areas', 'edgepoint-core' ),
+					'singular_name' => __( 'Solution area', 'edgepoint-core' ),
 				),
 				'public'            => true,
 				'hierarchical'      => true,
@@ -188,11 +188,11 @@ final class Endpoint_Core_Content {
 			)
 		);
 
-		$public_types = array( 'endpoint_service', 'endpoint_product', 'endpoint_project', 'endpoint_industry' );
+		$public_types = array( 'edgepoint_service', 'edgepoint_product', 'edgepoint_project', 'edgepoint_industry' );
 		foreach ( $public_types as $post_type ) {
 			register_post_meta(
 				$post_type,
-				'_endpoint_seo_description',
+				'_edgepoint_seo_description',
 				array(
 					'type'              => 'string',
 					'single'            => true,
@@ -206,8 +206,8 @@ final class Endpoint_Core_Content {
 		}
 
 		register_post_meta(
-			'endpoint_service',
-			'_endpoint_delivery_status',
+			'edgepoint_service',
+			'_edgepoint_delivery_status',
 			array(
 				'type'              => 'string',
 				'single'            => true,
@@ -246,19 +246,19 @@ final class Endpoint_Core_Content {
 		}
 
 		$capabilities = array(
-			'edit_endpoint_enquiry',
-			'read_endpoint_enquiry',
-			'delete_endpoint_enquiry',
-			'edit_endpoint_enquiries',
-			'edit_others_endpoint_enquiries',
-			'publish_endpoint_enquiries',
-			'read_private_endpoint_enquiries',
-			'delete_endpoint_enquiries',
-			'delete_private_endpoint_enquiries',
-			'delete_published_endpoint_enquiries',
-			'delete_others_endpoint_enquiries',
-			'edit_private_endpoint_enquiries',
-			'edit_published_endpoint_enquiries',
+			'edit_edgepoint_enquiry',
+			'read_edgepoint_enquiry',
+			'delete_edgepoint_enquiry',
+			'edit_edgepoint_enquiries',
+			'edit_others_edgepoint_enquiries',
+			'publish_edgepoint_enquiries',
+			'read_private_edgepoint_enquiries',
+			'delete_edgepoint_enquiries',
+			'delete_private_edgepoint_enquiries',
+			'delete_published_edgepoint_enquiries',
+			'delete_others_edgepoint_enquiries',
+			'edit_private_edgepoint_enquiries',
+			'edit_published_edgepoint_enquiries',
 		);
 
 		foreach ( $capabilities as $capability ) {
@@ -276,7 +276,7 @@ final class Endpoint_Core_Content {
 		if (
 			is_admin()
 			|| ! $query->is_main_query()
-			|| ! $query->is_post_type_archive( array( 'endpoint_service', 'endpoint_industry' ) )
+			|| ! $query->is_post_type_archive( array( 'edgepoint_service', 'edgepoint_industry' ) )
 		) {
 			return;
 		}

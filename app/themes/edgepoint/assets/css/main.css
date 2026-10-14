@@ -904,31 +904,31 @@ ol {
 	color: var(--white);
 }
 
-.endpoint-form {
+.edgepoint-form {
 	display: grid;
 	gap: 1.2rem;
 	margin-top: 2rem;
 }
 
-.endpoint-form__grid {
+.edgepoint-form__grid {
 	display: grid;
 	gap: 1.2rem;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.endpoint-field {
+.edgepoint-field {
 	display: grid;
 	gap: 0.45rem;
 }
 
-.endpoint-field label,
-.endpoint-field legend {
+.edgepoint-field label,
+.edgepoint-field legend {
 	font-weight: 750;
 }
 
-.endpoint-field input,
-.endpoint-field select,
-.endpoint-field textarea {
+.edgepoint-field input,
+.edgepoint-field select,
+.edgepoint-field textarea {
 	background: var(--white);
 	border: 1px solid #91a6b4;
 	border-radius: var(--radius-sm);
@@ -938,45 +938,45 @@ ol {
 	width: 100%;
 }
 
-.endpoint-field textarea {
+.edgepoint-field textarea {
 	min-height: 9rem;
 	resize: vertical;
 }
 
-.endpoint-field small {
+.edgepoint-field small {
 	color: var(--ink-700);
 }
 
-.endpoint-field--check {
+.edgepoint-field--check {
 	align-items: start;
 	display: flex;
 	gap: 0.7rem;
 }
 
-.endpoint-field--check input {
+.edgepoint-field--check input {
 	height: 1.2rem;
 	margin-top: 0.2rem;
 	min-height: auto;
 	width: 1.2rem;
 }
 
-.endpoint-notice {
+.edgepoint-notice {
 	border-left: 4px solid var(--signal-700);
 	margin-block: 1rem;
 	padding: 0.9rem 1rem;
 }
 
-.endpoint-notice--success {
+.edgepoint-notice--success {
 	background: #edf9f2;
 	border-color: var(--success);
 }
 
-.endpoint-notice--error {
+.edgepoint-notice--error {
 	background: #fff0ef;
 	border-color: var(--danger);
 }
 
-.endpoint-honeypot {
+.edgepoint-honeypot {
 	left: -10000px;
 	position: absolute;
 }
@@ -1120,7 +1120,7 @@ ol {
 
 	.solution-grid,
 	.post-grid,
-	.endpoint-form__grid {
+	.edgepoint-form__grid {
 		grid-template-columns: 1fr;
 	}
 

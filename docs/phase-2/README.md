@@ -2,7 +2,7 @@
 
 ## Confirmed inputs
 
-- Display name: **Endpoint Internet Solution**
+- Display name: **Edgepoint Internets Solutions Ltd**
 - Office: **Counter Business Center, Shop B08, Kasarani, Nairobi**
 - Service planning area: Kasarani, Nairobi, Ruiru, Gwakairu, and surrounding
   Nairobi metropolitan areas
@@ -12,7 +12,7 @@
 - Approved visual direction: sky blue and white, with deep navy reserved for
   readable text and contrast
 - Demonstrative service imagery: allowed where appropriate; stock/generated images
-  must not be represented as Endpoint staff, offices, customers, or projects
+  must not be represented as Edgepoint staff, offices, customers, or projects
 - Contact number and social profiles: preview placeholders until supplied
 
 The repository/domain retain their existing `edgepoint` spelling. The public display
@@ -21,8 +21,8 @@ domain/brand alignment remain release decisions.
 
 ## Deliverables
 
-- `app/themes/endpoint`: custom accessible WordPress theme
-- `app/plugins/endpoint-core`: portable content, settings, SEO, and quote workflow
+- `app/themes/edgepoint`: custom accessible WordPress theme
+- `app/plugins/edgepoint-core`: portable content, settings, SEO, and quote workflow
 - `config/playground-blueprint.json`: disposable real-WordPress preview setup
 - `tests/fixtures/seed-preview.php`: editable preview pages and service records
 - `scripts/validate.sh`: PHP/JSON and unsafe-pattern checks
@@ -49,8 +49,8 @@ From the repository root:
 ```bash
 npx @wp-playground/cli@latest server \
   --blueprint=./config/playground-blueprint.json \
-  --mount=./app/themes/endpoint:/wordpress/wp-content/themes/endpoint \
-  --mount=./app/plugins/endpoint-core:/wordpress/wp-content/plugins/endpoint-core \
+  --mount=./app/themes/edgepoint:/wordpress/wp-content/themes/edgepoint \
+  --mount=./app/plugins/edgepoint-core:/wordpress/wp-content/plugins/edgepoint-core \
   --mount=./tests/fixtures:/wordpress/wp-content/preview-fixtures
 ```
 
@@ -67,8 +67,8 @@ chmod +x scripts/*.sh
 
 Generated artifacts:
 
-- `dist/endpoint-theme-0.1.0.zip`
-- `dist/endpoint-core-0.1.0.zip`
+- `dist/edgepoint-theme-0.1.0.zip`
+- `dist/edgepoint-core-0.1.0.zip`
 - `dist/SHA256SUMS`
 - `dist/RELEASE.txt`
 

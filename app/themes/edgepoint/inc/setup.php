@@ -2,7 +2,7 @@
 /**
  * Theme setup and assets.
  *
- * @package Endpoint
+ * @package Edgepoint
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -12,8 +12,8 @@ defined( 'ABSPATH' ) || exit;
  *
  * @return void
  */
-function endpoint_theme_setup() {
-	load_theme_textdomain( 'endpoint', get_template_directory() . '/languages' );
+function edgepoint_theme_setup() {
+	load_theme_textdomain( 'edgepoint', get_template_directory() . '/languages' );
 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
@@ -45,27 +45,27 @@ function endpoint_theme_setup() {
 		'editor-color-palette',
 		array(
 			array(
-				'name'  => __( 'Midnight', 'endpoint' ),
+				'name'  => __( 'Midnight', 'edgepoint' ),
 				'slug'  => 'midnight',
 				'color' => '#071b2b',
 			),
 			array(
-				'name'  => __( 'Signal blue', 'endpoint' ),
+				'name'  => __( 'Signal blue', 'edgepoint' ),
 				'slug'  => 'signal-blue',
 				'color' => '#075ea8',
 			),
 			array(
-				'name'  => __( 'Cyan', 'endpoint' ),
+				'name'  => __( 'Cyan', 'edgepoint' ),
 				'slug'  => 'cyan',
 				'color' => '#63d8e6',
 			),
 			array(
-				'name'  => __( 'Cloud', 'endpoint' ),
+				'name'  => __( 'Cloud', 'edgepoint' ),
 				'slug'  => 'cloud',
 				'color' => '#eef5f8',
 			),
 			array(
-				'name'  => __( 'White', 'endpoint' ),
+				'name'  => __( 'White', 'edgepoint' ),
 				'slug'  => 'white',
 				'color' => '#ffffff',
 			),
@@ -74,49 +74,49 @@ function endpoint_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'primary' => __( 'Primary navigation', 'endpoint' ),
-			'footer'  => __( 'Footer navigation', 'endpoint' ),
+			'primary' => __( 'Primary navigation', 'edgepoint' ),
+			'footer'  => __( 'Footer navigation', 'edgepoint' ),
 		)
 	);
 
-	add_image_size( 'endpoint-card', 720, 480, true );
+	add_image_size( 'edgepoint-card', 720, 480, true );
 }
-add_action( 'after_setup_theme', 'endpoint_theme_setup' );
+add_action( 'after_setup_theme', 'edgepoint_theme_setup' );
 
 /**
  * Set a readable content width.
  *
  * @return void
  */
-function endpoint_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'endpoint_content_width', 760 );
+function edgepoint_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'edgepoint_content_width', 760 );
 }
-add_action( 'after_setup_theme', 'endpoint_content_width', 0 );
+add_action( 'after_setup_theme', 'edgepoint_content_width', 0 );
 
 /**
  * Load the small, dependency-free frontend assets.
  *
  * @return void
  */
-function endpoint_enqueue_assets() {
+function edgepoint_enqueue_assets() {
 	$version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_style(
-		'endpoint-main',
+		'edgepoint-main',
 		get_template_directory_uri() . '/assets/css/main.css',
 		array(),
 		$version
 	);
 
 	wp_enqueue_script(
-		'endpoint-navigation',
+		'edgepoint-navigation',
 		get_template_directory_uri() . '/assets/js/navigation.js',
 		array(),
 		$version,
 		true
 	);
 }
-add_action( 'wp_enqueue_scripts', 'endpoint_enqueue_assets' );
+add_action( 'wp_enqueue_scripts', 'edgepoint_enqueue_assets' );
 
 /**
  * Add defer to the theme navigation script.
@@ -125,21 +125,21 @@ add_action( 'wp_enqueue_scripts', 'endpoint_enqueue_assets' );
  * @param string $handle Script handle.
  * @return string
  */
-function endpoint_defer_navigation_script( $tag, $handle ) {
-	if ( 'endpoint-navigation' !== $handle ) {
+function edgepoint_defer_navigation_script( $tag, $handle ) {
+	if ( 'edgepoint-navigation' !== $handle ) {
 		return $tag;
 	}
 
 	return str_replace( ' src=', ' defer src=', $tag );
 }
-add_filter( 'script_loader_tag', 'endpoint_defer_navigation_script', 10, 2 );
+add_filter( 'script_loader_tag', 'edgepoint_defer_navigation_script', 10, 2 );
 
 /**
  * Preload the small local variable font used above the fold.
  *
  * @return void
  */
-function endpoint_preload_font() {
+function edgepoint_preload_font() {
 	?>
 	<link
 		rel="preload"
@@ -150,4 +150,4 @@ function endpoint_preload_font() {
 	>
 	<?php
 }
-add_action( 'wp_head', 'endpoint_preload_font', 1 );
+add_action( 'wp_head', 'edgepoint_preload_font', 1 );

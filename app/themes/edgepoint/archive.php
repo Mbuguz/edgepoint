@@ -2,20 +2,20 @@
 /**
  * Structured-content archive.
  *
- * @package Endpoint
+ * @package Edgepoint
  */
 
 defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$is_service_archive = is_post_type_archive( 'endpoint_service' );
+$is_service_archive = is_post_type_archive( 'edgepoint_service' );
 $item_number        = 0;
 ?>
 <main id="main" class="main-content">
 	<section class="archive-hero">
 		<div class="wrap archive-heading">
-		<p class="eyebrow"><?php esc_html_e( 'Endpoint solutions', 'endpoint' ); ?></p>
+		<p class="eyebrow"><?php esc_html_e( 'Edgepoint solutions', 'edgepoint' ); ?></p>
 		<h1>
 			<?php
 			if ( is_post_type_archive() ) {
@@ -26,7 +26,7 @@ $item_number        = 0;
 			?>
 		</h1>
 		<?php if ( $is_service_archive ) : ?>
-			<p class="archive-heading__lead"><?php esc_html_e( 'Twelve connected service families. Explore one capability or combine several into a solution planned around your environment.', 'endpoint' ); ?></p>
+			<p class="archive-heading__lead"><?php esc_html_e( 'Twelve connected service families. Explore one capability or combine several into a solution planned around your environment.', 'edgepoint' ); ?></p>
 		<?php endif; ?>
 		<?php the_archive_description( '<div class="archive-heading__description">', '</div>' ); ?>
 		</div>
@@ -47,7 +47,7 @@ $item_number        = 0;
 				<article <?php post_class( 'post-card' ); ?> data-reveal>
 					<?php if ( has_post_thumbnail() ) : ?>
 						<a class="post-card__image" href="<?php the_permalink(); ?>" tabindex="-1" aria-hidden="true">
-							<?php the_post_thumbnail( 'endpoint-card' ); ?>
+							<?php the_post_thumbnail( 'edgepoint-card' ); ?>
 						</a>
 					<?php endif; ?>
 					<div class="post-card__body">
@@ -59,15 +59,15 @@ $item_number        = 0;
 						<?php if ( $capabilities ) : ?>
 							<div class="post-card__capabilities"><?php echo wp_kses_post( $capabilities ); ?></div>
 						<?php endif; ?>
-						<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Explore this solution', 'endpoint' ); ?> <span aria-hidden="true">→</span></a>
+						<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'Explore this solution', 'edgepoint' ); ?> <span aria-hidden="true">→</span></a>
 					</div>
 				</article>
 			<?php endwhile; ?>
 		<?php else : ?>
 			<div class="empty-state">
-				<h2><?php esc_html_e( 'Detailed solutions are being prepared.', 'endpoint' ); ?></h2>
-				<p><?php esc_html_e( 'Tell us what you need and we will help route your request.', 'endpoint' ); ?></p>
-				<a class="button" href="<?php echo esc_url( home_url( '/get-a-quote/' ) ); ?>"><?php esc_html_e( 'Request a quote', 'endpoint' ); ?></a>
+				<h2><?php esc_html_e( 'Detailed solutions are being prepared.', 'edgepoint' ); ?></h2>
+				<p><?php esc_html_e( 'Tell us what you need and we will help route your request.', 'edgepoint' ); ?></p>
+				<a class="button" href="<?php echo esc_url( home_url( '/get-a-quote/' ) ); ?>"><?php esc_html_e( 'Request a quote', 'edgepoint' ); ?></a>
 			</div>
 		<?php endif; ?>
 	</div>

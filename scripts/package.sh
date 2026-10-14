@@ -12,23 +12,23 @@ mkdir -p "$DIST"
 
 (
 	cd "$ROOT/app/themes"
-	zip -q -r "$DIST/endpoint-theme-$VERSION.zip" endpoint \
+	zip -q -r "$DIST/edgepoint-theme-$VERSION.zip" edgepoint \
 		-x '*.DS_Store' '*.map' '*/node_modules/*'
 )
 
 (
 	cd "$ROOT/app/plugins"
-	zip -q -r "$DIST/endpoint-core-$VERSION.zip" endpoint-core \
+	zip -q -r "$DIST/edgepoint-core-$VERSION.zip" edgepoint-core \
 		-x '*.DS_Store' '*.map' '*/node_modules/*'
 )
 
 (
 	cd "$DIST"
-	sha256sum endpoint-*.zip > SHA256SUMS
+	sha256sum edgepoint-*.zip > SHA256SUMS
 )
 
 cat > "$DIST/RELEASE.txt" <<EOF
-Endpoint Internet Solution preview release
+Edgepoint Internets Solutions Ltd preview release
 Version: $VERSION
 Commit: $(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null || echo uncommitted)
 Mode: PREVIEW ONLY

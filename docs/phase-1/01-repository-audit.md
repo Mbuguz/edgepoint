@@ -27,9 +27,9 @@ experience, or outcomes.
 
 ## Verified inputs and later confirmations
 
-- Initial brief name: **Edgepoint Internet Solutions Ltd**.
+- Initial brief name: **Edgepoint Internets Solutions Ltd**.
 - Client-confirmed display name on 2026-10-13:
-  **Endpoint Internet Solution**. Legal registration wording remains unverified.
+  **Edgepoint Internets Solutions Ltd**. Legal registration wording remains unverified.
 - Public website URL supplied by client:
   `https://edgepoint-internet.com/`.
 - Platform and delivery model: WordPress on shared cPanel hosting; installable
@@ -96,7 +96,7 @@ experience, or outcomes.
 - Whether online payment or ecommerce is required. It is not assumed in Phase 1.
 - Industries actually served and whether industry-specific evidence exists.
 - Whether sector systems (school, hospital, SACCO, HR/payroll, inventory, ERP) are
-  existing Endpoint products, third-party implementations, or custom-build
+  existing Edgepoint products, third-party implementations, or custom-build
   capabilities, including ownership, security, support, and compliance boundaries.
 - Existing support process, escalation contacts, and ticketing needs.
 

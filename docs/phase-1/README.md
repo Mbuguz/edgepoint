@@ -6,7 +6,7 @@
 
 ## Purpose
 
-This package defines a production-ready direction for the Endpoint Internet
+This package defines a production-ready direction for the Edgepoint Internet
 Solution WordPress website without making changes to the live site. It separates
 verified inputs from assumptions and turns the brief into testable implementation
 requirements.

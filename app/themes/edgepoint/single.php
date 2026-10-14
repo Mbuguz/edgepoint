@@ -2,7 +2,7 @@
 /**
  * Single content template.
  *
- * @package Endpoint
+ * @package Edgepoint
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -29,7 +29,7 @@ get_header();
 				<?php the_content(); ?>
 			</div>
 			<footer class="entry__footer">
-				<a class="button" href="<?php echo esc_url( home_url( '/get-a-quote/' ) ); ?>"><?php esc_html_e( 'Discuss your requirements', 'endpoint' ); ?></a>
+				<a class="button" href="<?php echo esc_url( home_url( '/get-a-quote/' ) ); ?>"><?php esc_html_e( 'Discuss your requirements', 'edgepoint' ); ?></a>
 			</footer>
 		</article>
 	<?php endwhile; ?>

@@ -13,8 +13,8 @@ $pages = array(
 		'content' => '',
 	),
 	'about'         => array(
-		'title'   => 'About Endpoint',
-		'content' => '<p>Endpoint Internet Solution brings connectivity, infrastructure, digital systems, security and support together for homes, businesses and institutions.</p><h2>One connected view of technology</h2><p>A network decision can affect security. A cloud decision can affect cost, identity and recovery. A new business system can only succeed when people, data and support are considered alongside the software. Endpoint exists to connect those decisions rather than treating each requirement as an isolated purchase.</p><h2>How we approach the work</h2><ol><li><strong>Discover:</strong> understand the environment, users, pressure points and desired outcome.</li><li><strong>Design:</strong> define a practical scope, assumptions and responsibilities.</li><li><strong>Deliver:</strong> install or build, configure, test and document.</li><li><strong>Support:</strong> agree the handover, maintenance path and next priorities.</li></ol><h2>Local service, wider capability</h2><p>Our office is at Counter Business Center, Shop B08, Kasarani, Nairobi. We plan services across Kasarani, Nairobi, Ruiru, Gwakairu and surrounding metropolitan areas, subject to project requirements.</p><p>Company history, team profiles, certifications and customer evidence will be added only after verification.</p>',
+		'title'   => 'About Edgepoint',
+		'content' => '<p>Edgepoint Internets Solutions Ltd brings connectivity, infrastructure, digital systems, security and support together for homes, businesses and institutions.</p><h2>One connected view of technology</h2><p>A network decision can affect security. A cloud decision can affect cost, identity and recovery. A new business system can only succeed when people, data and support are considered alongside the software. Edgepoint exists to connect those decisions rather than treating each requirement as an isolated purchase.</p><h2>How we approach the work</h2><ol><li><strong>Discover:</strong> understand the environment, users, pressure points and desired outcome.</li><li><strong>Design:</strong> define a practical scope, assumptions and responsibilities.</li><li><strong>Deliver:</strong> install or build, configure, test and document.</li><li><strong>Support:</strong> agree the handover, maintenance path and next priorities.</li></ol><h2>Local service, wider capability</h2><p>Our office is at Counter Business Center, Shop B08, Kasarani, Nairobi. We plan services across Kasarani, Nairobi, Ruiru, Gwakairu and surrounding metropolitan areas, subject to project requirements.</p><p>Company history, team profiles, certifications and customer evidence will be added only after verification.</p>',
 	),
 	'support'       => array(
 		'title'   => 'Support',
@@ -30,7 +30,7 @@ $pages = array(
 	),
 	'get-a-quote'   => array(
 		'title'   => 'Get a Quote',
-		'content' => '<p>Tell us what you need, where the project is located and the outcome you want. This preview validates the form but does not store or deliver personal information.</p>[endpoint_quote_form]',
+		'content' => '<p>Tell us what you need, where the project is located and the outcome you want. This preview validates the form but does not store or deliver personal information.</p>[edgepoint_quote_form]',
 	),
 	'privacy-policy' => array(
 		'title'   => 'Privacy Policy',
@@ -42,7 +42,7 @@ $pages = array(
 	),
 	'accessibility' => array(
 		'title'   => 'Accessibility',
-		'content' => '<p>Endpoint aims to provide an inclusive website aligned with WCAG 2.2 Level AA. Verified contact details for reporting an accessibility problem will be added before production release.</p>',
+		'content' => '<p>Edgepoint aims to provide an inclusive website aligned with WCAG 2.2 Level AA. Verified contact details for reporting an accessibility problem will be added before production release.</p>',
 	),
 	'insights'      => array(
 		'title'   => 'Insights',
@@ -116,7 +116,7 @@ $services = array(
 	'cybersecurity' => array(
 		'Cybersecurity',
 		'Layered security services based on business risk, authorized scope and practical recovery.',
-		array( 'Firewall and endpoint protection', 'Email and website security', 'Security audits and authorized penetration testing', 'VPN and encryption', 'Backup and disaster recovery' ),
+		array( 'Firewall and edgepoint protection', 'Email and website security', 'Security audits and authorized penetration testing', 'VPN and encryption', 'Backup and disaster recovery' ),
 	),
 	'ict-equipment-supplies' => array(
 		'ICT Equipment & Supplies',
@@ -141,7 +141,7 @@ $services = array(
 );
 
 foreach ( $services as $slug => $service ) {
-	if ( get_page_by_path( $slug, OBJECT, 'endpoint_service' ) ) {
+	if ( get_page_by_path( $slug, OBJECT, 'edgepoint_service' ) ) {
 		continue;
 	}
 
@@ -153,7 +153,7 @@ foreach ( $services as $slug => $service ) {
 
 	wp_insert_post(
 		array(
-			'post_type'    => 'endpoint_service',
+			'post_type'    => 'edgepoint_service',
 			'post_status'  => 'publish',
 			'post_title'   => $service[0],
 			'post_name'    => $slug,
@@ -180,13 +180,13 @@ $industries = array(
 );
 
 foreach ( $industries as $slug => $industry ) {
-	if ( get_page_by_path( $slug, OBJECT, 'endpoint_industry' ) ) {
+	if ( get_page_by_path( $slug, OBJECT, 'edgepoint_industry' ) ) {
 		continue;
 	}
 
 	wp_insert_post(
 		array(
-			'post_type'    => 'endpoint_industry',
+			'post_type'    => 'edgepoint_industry',
 			'post_status'  => 'publish',
 			'post_title'   => $industry[0],
 			'post_name'    => $slug,
@@ -236,7 +236,7 @@ foreach ( $insights as $slug => $insight ) {
 	);
 }
 
-update_option( 'blogname', 'Endpoint Internet Solution' );
+update_option( 'blogname', 'Edgepoint Internets Solutions Ltd' );
 update_option( 'blogdescription', 'Connect. Secure. Grow.' );
 update_option( 'permalink_structure', '/%postname%/' );
 flush_rewrite_rules();

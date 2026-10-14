@@ -12,11 +12,11 @@
   "steps": [
     {
       "step": "activatePlugin",
-      "pluginPath": "/wordpress/wp-content/plugins/endpoint-core/endpoint-core.php"
+      "pluginPath": "/wordpress/wp-content/plugins/edgepoint-core/edgepoint-core.php"
     },
     {
       "step": "activateTheme",
-      "themeFolderName": "endpoint"
+      "themeFolderName": "edgepoint"
     },
     {
       "step": "runPHP",

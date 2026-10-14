@@ -2,7 +2,7 @@
 /**
  * Standard page template.
  *
- * @package Endpoint
+ * @package Edgepoint
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -14,7 +14,7 @@ get_header();
 		<?php the_post(); ?>
 		<article <?php post_class( 'entry wrap wrap--reading' ); ?>>
 			<header class="entry__header">
-				<p class="eyebrow"><?php esc_html_e( 'Endpoint Internet Solution', 'endpoint' ); ?></p>
+				<p class="eyebrow"><?php esc_html_e( 'Edgepoint Internets Solutions Ltd', 'edgepoint' ); ?></p>
 				<h1><?php the_title(); ?></h1>
 			</header>
 			<div class="entry__content">

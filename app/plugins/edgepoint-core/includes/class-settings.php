@@ -2,7 +2,7 @@
 /**
  * Business identity and integration settings.
  *
- * @package EndpointCore
+ * @package EdgepointCore
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Manage the single source of truth for business details.
  */
-final class Endpoint_Core_Settings {
+final class Edgepoint_Core_Settings {
 
 	/**
 	 * Attach settings hooks.
@@ -30,7 +30,7 @@ final class Endpoint_Core_Settings {
 	 */
 	public static function defaults() {
 		return array(
-			'name'         => 'Endpoint Internet Solution',
+			'name'         => 'Edgepoint Internets Solutions Ltd',
 			'phone'        => '+254 700 000 000',
 			'email'        => 'hello@example.com',
 			'address'      => 'Counter Business Center, Shop B08, Kasarani, Nairobi',
@@ -51,7 +51,7 @@ final class Endpoint_Core_Settings {
 	 * @return array<string, string|int>
 	 */
 	public static function get() {
-		return wp_parse_args( get_option( 'endpoint_business_details', array() ), self::defaults() );
+		return wp_parse_args( get_option( 'edgepoint_business_details', array() ), self::defaults() );
 	}
 
 	/**
@@ -61,10 +61,10 @@ final class Endpoint_Core_Settings {
 	 */
 	public static function add_page() {
 		add_options_page(
-			__( 'Endpoint business details', 'endpoint-core' ),
-			__( 'Endpoint details', 'endpoint-core' ),
+			__( 'Edgepoint business details', 'edgepoint-core' ),
+			__( 'Edgepoint details', 'edgepoint-core' ),
 			'manage_options',
-			'endpoint-settings',
+			'edgepoint-settings',
 			array( __CLASS__, 'render' )
 		);
 	}
@@ -76,8 +76,8 @@ final class Endpoint_Core_Settings {
 	 */
 	public static function register() {
 		register_setting(
-			'endpoint_settings',
-			'endpoint_business_details',
+			'edgepoint_settings',
+			'edgepoint_business_details',
 			array(
 				'type'              => 'array',
 				'default'           => self::defaults(),
@@ -133,9 +133,9 @@ final class Endpoint_Core_Settings {
 		?>
 		<div class="notice notice-warning">
 			<p>
-				<strong><?php esc_html_e( 'Endpoint preview mode is active.', 'endpoint-core' ); ?></strong>
-				<?php esc_html_e( 'The phone number, email, social profiles and enquiry delivery are placeholders. Do not release this site until verified details are saved and preview mode is disabled.', 'endpoint-core' ); ?>
-				<a href="<?php echo esc_url( admin_url( 'options-general.php?page=endpoint-settings' ) ); ?>"><?php esc_html_e( 'Review details', 'endpoint-core' ); ?></a>
+				<strong><?php esc_html_e( 'Edgepoint preview mode is active.', 'edgepoint-core' ); ?></strong>
+				<?php esc_html_e( 'The phone number, email, social profiles and enquiry delivery are placeholders. Do not release this site until verified details are saved and preview mode is disabled.', 'edgepoint-core' ); ?>
+				<a href="<?php echo esc_url( admin_url( 'options-general.php?page=edgepoint-settings' ) ); ?>"><?php esc_html_e( 'Review details', 'edgepoint-core' ); ?></a>
 			</p>
 		</div>
 		<?php
@@ -153,32 +153,32 @@ final class Endpoint_Core_Settings {
 
 		$settings = self::get();
 		$fields   = array(
-			'name'         => array( __( 'Display name', 'endpoint-core' ), 'text' ),
-			'phone'        => array( __( 'Phone / WhatsApp', 'endpoint-core' ), 'tel' ),
-			'email'        => array( __( 'Public email', 'endpoint-core' ), 'email' ),
-			'address'      => array( __( 'Office address', 'endpoint-core' ), 'text' ),
-			'hours'        => array( __( 'Availability', 'endpoint-core' ), 'text' ),
-			'quote_email'  => array( __( 'Private quote recipient', 'endpoint-core' ), 'email' ),
-			'facebook'     => array( __( 'Facebook URL', 'endpoint-core' ), 'url' ),
-			'instagram'    => array( __( 'Instagram URL', 'endpoint-core' ), 'url' ),
-			'linkedin'     => array( __( 'LinkedIn URL', 'endpoint-core' ), 'url' ),
-			'x'            => array( __( 'X URL', 'endpoint-core' ), 'url' ),
+			'name'         => array( __( 'Display name', 'edgepoint-core' ), 'text' ),
+			'phone'        => array( __( 'Phone / WhatsApp', 'edgepoint-core' ), 'tel' ),
+			'email'        => array( __( 'Public email', 'edgepoint-core' ), 'email' ),
+			'address'      => array( __( 'Office address', 'edgepoint-core' ), 'text' ),
+			'hours'        => array( __( 'Availability', 'edgepoint-core' ), 'text' ),
+			'quote_email'  => array( __( 'Private quote recipient', 'edgepoint-core' ), 'email' ),
+			'facebook'     => array( __( 'Facebook URL', 'edgepoint-core' ), 'url' ),
+			'instagram'    => array( __( 'Instagram URL', 'edgepoint-core' ), 'url' ),
+			'linkedin'     => array( __( 'LinkedIn URL', 'edgepoint-core' ), 'url' ),
+			'x'            => array( __( 'X URL', 'edgepoint-core' ), 'url' ),
 		);
 		?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'Endpoint business details', 'endpoint-core' ); ?></h1>
-			<p><?php esc_html_e( 'These values power contact components and eligible structured data. Enter only verified information.', 'endpoint-core' ); ?></p>
+			<h1><?php esc_html_e( 'Edgepoint business details', 'edgepoint-core' ); ?></h1>
+			<p><?php esc_html_e( 'These values power contact components and eligible structured data. Enter only verified information.', 'edgepoint-core' ); ?></p>
 			<form method="post" action="options.php">
-				<?php settings_fields( 'endpoint_settings' ); ?>
+				<?php settings_fields( 'edgepoint_settings' ); ?>
 				<table class="form-table" role="presentation">
 					<?php foreach ( $fields as $key => $field ) : ?>
 						<tr>
-							<th scope="row"><label for="endpoint-<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $field[0] ); ?></label></th>
+							<th scope="row"><label for="edgepoint-<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $field[0] ); ?></label></th>
 							<td>
 								<input
 									class="regular-text"
-									id="endpoint-<?php echo esc_attr( $key ); ?>"
-									name="endpoint_business_details[<?php echo esc_attr( $key ); ?>]"
+									id="edgepoint-<?php echo esc_attr( $key ); ?>"
+									name="edgepoint_business_details[<?php echo esc_attr( $key ); ?>]"
 									type="<?php echo esc_attr( $field[1] ); ?>"
 									value="<?php echo esc_attr( $settings[ $key ] ); ?>"
 								>
@@ -186,15 +186,15 @@ final class Endpoint_Core_Settings {
 						</tr>
 					<?php endforeach; ?>
 					<tr>
-						<th scope="row"><label for="endpoint-service-area"><?php esc_html_e( 'Service area', 'endpoint-core' ); ?></label></th>
-						<td><textarea class="large-text" id="endpoint-service-area" name="endpoint_business_details[service_area]" rows="3"><?php echo esc_textarea( $settings['service_area'] ); ?></textarea></td>
+						<th scope="row"><label for="edgepoint-service-area"><?php esc_html_e( 'Service area', 'edgepoint-core' ); ?></label></th>
+						<td><textarea class="large-text" id="edgepoint-service-area" name="edgepoint_business_details[service_area]" rows="3"><?php echo esc_textarea( $settings['service_area'] ); ?></textarea></td>
 					</tr>
 					<tr>
-						<th scope="row"><?php esc_html_e( 'Release state', 'endpoint-core' ); ?></th>
+						<th scope="row"><?php esc_html_e( 'Release state', 'edgepoint-core' ); ?></th>
 						<td>
 							<label>
-								<input name="endpoint_business_details[demo_mode]" type="checkbox" value="1" <?php checked( 1, $settings['demo_mode'] ); ?>>
-								<?php esc_html_e( 'Preview mode: placeholders remain and enquiry delivery is disabled', 'endpoint-core' ); ?>
+								<input name="edgepoint_business_details[demo_mode]" type="checkbox" value="1" <?php checked( 1, $settings['demo_mode'] ); ?>>
+								<?php esc_html_e( 'Preview mode: placeholders remain and enquiry delivery is disabled', 'edgepoint-core' ); ?>
 							</label>
 						</td>
 					</tr>

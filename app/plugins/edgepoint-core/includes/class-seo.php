@@ -2,7 +2,7 @@
 /**
  * Minimal technical SEO layer.
  *
- * @package EndpointCore
+ * @package EdgepointCore
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Provide safe defaults without competing with a full SEO plugin.
  */
-final class Endpoint_Core_Seo {
+final class Edgepoint_Core_Seo {
 
 	/**
 	 * Attach hooks.
@@ -46,7 +46,7 @@ final class Endpoint_Core_Seo {
 	 * @return array<string, bool>
 	 */
 	public static function robots( $robots ) {
-		$settings = Endpoint_Core_Settings::get();
+		$settings = Edgepoint_Core_Settings::get();
 		if ( ! empty( $settings['demo_mode'] ) || is_search() || is_404() ) {
 			$robots['noindex'] = true;
 			unset( $robots['index'] );
@@ -62,11 +62,11 @@ final class Endpoint_Core_Seo {
 	 */
 	private static function description() {
 		if ( is_front_page() ) {
-			return __( 'Integrated internet, networking, software, cloud, security and ICT solutions for homes, businesses and institutions across Kasarani, Nairobi and surrounding areas.', 'endpoint-core' );
+			return __( 'Integrated internet, networking, software, cloud, security and ICT solutions for homes, businesses and institutions across Kasarani, Nairobi and surrounding areas.', 'edgepoint-core' );
 		}
 
 		if ( is_singular() ) {
-			$custom = get_post_meta( get_queried_object_id(), '_endpoint_seo_description', true );
+			$custom = get_post_meta( get_queried_object_id(), '_edgepoint_seo_description', true );
 			if ( $custom ) {
 				return wp_strip_all_tags( $custom );
 			}
@@ -91,7 +91,7 @@ final class Endpoint_Core_Seo {
 	 */
 	public static function head() {
 		$description = self::description();
-		$settings    = Endpoint_Core_Settings::get();
+		$settings    = Edgepoint_Core_Settings::get();
 		$title       = wp_get_document_title();
 		$url         = is_singular() ? get_permalink() : home_url( wp_unslash( $_SERVER['REQUEST_URI'] ?? '/' ) );
 		$image       = is_singular() && has_post_thumbnail() ? get_the_post_thumbnail_url( get_queried_object_id(), 'large' ) : '';

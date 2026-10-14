@@ -93,14 +93,14 @@ clusters, not instructions to publish one page per phrase:
 | CCTV/security systems | CCTV/IP camera installation; remote monitoring; biometric access control; electric fence; alarms | CCTV hub plus dedicated access/perimeter pages only after licensing, privacy, safety, and delivery model are approved |
 | Equipment/products | routers, switches, access points, fiber accessories, cabinets, patch panels, cables, SFP, PoE, tools; MikroTik/Ubiquiti/TP-Link/Cisco/Huawei | Product category pages driven by current catalog; brand pages only with sufficient genuine inventory and no partnership implication |
 | Cloud/business | Google Workspace; Microsoft 365; business email; storage/backup; cloud servers/VPS; domains; hosting; SSL; DNS | Cloud hub; hosting/domain and workspace child pages may qualify after reseller/account-ownership terms are clear |
-| Cybersecurity | firewall, antivirus, endpoint/email/website security, penetration testing, audits, VPN, encryption, backup/disaster recovery | Security hub; penetration testing gets a separate page only with competence, authorization process, methodology, and safe claim review |
+| Cybersecurity | firewall, antivirus, edgepoint/email/website security, penetration testing, audits, VPN, encryption, backup/disaster recovery | Security hub; penetration testing gets a separate page only with competence, authorization process, methodology, and safe claim review |
 | Consultancy/support | digital transformation; infrastructure planning; advisory; ICT policy; project management; integration; automation; procurement; IT audit; technical support | Consulting hub and support page; split audits/procurement only when independence and deliverables are explicit |
 | Telecommunications | VoIP, IP PBX, video conferencing, office communications, SIP trunk | One telecommunications hub initially; platform/provider pages only with verified relationships and support scope |
 | Digital marketing | SEO, social media, paid search/social, graphic/logo/brand design, email, content | One digital growth hub; SEO/paid media/design pages qualify only with distinct teams, process, evidence, and non-guaranteed outcomes |
 | ICT supplies | computers, laptops, printers, storage, licences, office electronics, projectors, smart displays, monitors, peripherals | Product taxonomy, not dozens of static service pages; index only useful populated categories with current availability policy |
 
 Keyword research must distinguish “sales,” “supplier,” “installation,” “repair,”
-“configuration,” “support,” and “consulting.” Do not target an intent that Endpoint
+“configuration,” “support,” and “consulting.” Do not target an intent that Edgepoint
 does not actually fulfil. Named brands may appear in titles or body copy only when
 products/services are genuine and trademark wording is accurate.
 

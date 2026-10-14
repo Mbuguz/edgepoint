@@ -1,8 +1,8 @@
 <?php
 /**
- * Endpoint theme bootstrap.
+ * Edgepoint theme bootstrap.
  *
- * @package Endpoint
+ * @package Edgepoint
  */
 
 defined( 'ABSPATH' ) || exit;
