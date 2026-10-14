@@ -7,6 +7,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
+if ( is_category() || is_tag() || is_author() || is_date() ) {
+	require get_template_directory() . '/index.php';
+	return;
+}
+
 get_header();
 
 $is_service_archive = is_post_type_archive( 'edgepoint_service' );

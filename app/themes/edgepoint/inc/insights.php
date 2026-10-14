@@ -29,6 +29,21 @@ function edgepoint_ensure_trends_category() {
 add_action( 'init', 'edgepoint_ensure_trends_category' );
 
 /**
+ * Use the category name itself as the archive title.
+ *
+ * @param string $title Archive title.
+ * @return string
+ */
+function edgepoint_archive_title( $title ) {
+	if ( is_category() ) {
+		return single_cat_title( '', false );
+	}
+
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'edgepoint_archive_title' );
+
+/**
  * Whether a post is filed under Trends.
  *
  * @param int|null $post_id Post ID.
