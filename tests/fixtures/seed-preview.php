@@ -14,7 +14,7 @@ $pages = array(
 	),
 	'about'         => array(
 		'title'   => 'About Endpoint',
-		'content' => '<p>Endpoint Internet Solution brings connectivity, infrastructure, digital systems, security and support together for homes, businesses and institutions.</p><h2>Technology planned around real needs</h2><p>Our approach begins with the environment, users, risks and desired outcome. We then define a practical scope, deliver the agreed work and provide a clear handover.</p><h2>Local service, connected capability</h2><p>Our office is at Counter Business Center, Shop B08, Kasarani, Nairobi. We plan services across Kasarani, Nairobi, Ruiru, Gwakairu and surrounding metropolitan areas, subject to project requirements.</p>',
+		'content' => '<p>Endpoint Internet Solution brings connectivity, infrastructure, digital systems, security and support together for homes, businesses and institutions.</p><h2>One connected view of technology</h2><p>A network decision can affect security. A cloud decision can affect cost, identity and recovery. A new business system can only succeed when people, data and support are considered alongside the software. Endpoint exists to connect those decisions rather than treating each requirement as an isolated purchase.</p><h2>How we approach the work</h2><ol><li><strong>Discover:</strong> understand the environment, users, pressure points and desired outcome.</li><li><strong>Design:</strong> define a practical scope, assumptions and responsibilities.</li><li><strong>Deliver:</strong> install or build, configure, test and document.</li><li><strong>Support:</strong> agree the handover, maintenance path and next priorities.</li></ol><h2>Local service, wider capability</h2><p>Our office is at Counter Business Center, Shop B08, Kasarani, Nairobi. We plan services across Kasarani, Nairobi, Ruiru, Gwakairu and surrounding metropolitan areas, subject to project requirements.</p><p>Company history, team profiles, certifications and customer evidence will be added only after verification.</p>',
 	),
 	'support'       => array(
 		'title'   => 'Support',
@@ -159,6 +159,74 @@ foreach ( $services as $slug => $service ) {
 			'post_name'    => $slug,
 			'post_excerpt' => $service[1],
 			'post_content' => '<p>' . esc_html( $service[1] ) . '</p><h2>Capabilities</h2>' . $list . '<h2>Plan the right next step</h2><p>Final scope, availability, equipment, timing and support terms are confirmed after requirements review or a site assessment.</p>',
+		)
+	);
+}
+
+$industries = array(
+	'education'             => array( 'Schools & Universities', 'Connected learning environments, secure administration systems, campus networks and practical ICT support.' ),
+	'healthcare'            => array( 'Hospitals & Clinics', 'Reliable connectivity, secure systems and carefully governed technology for sensitive healthcare environments.' ),
+	'government'            => array( 'Government Institutions', 'Structured ICT planning, infrastructure and support aligned with approved procurement and governance requirements.' ),
+	'ngos'                  => array( 'NGOs', 'Resilient, supportable technology for distributed teams, programmes and field operations.' ),
+	'hospitality'           => array( 'Hotels & Restaurants', 'Guest Wi-Fi, communications, security and business systems designed around service continuity.' ),
+	'retail'                => array( 'Retail Businesses', 'Connectivity, surveillance, devices and systems that support customer service and daily operations.' ),
+	'manufacturing'         => array( 'Manufacturing Companies', 'Dependable networks, monitoring, security and support for operational environments.' ),
+	'financial-services'    => array( 'Financial Institutions', 'Security-conscious infrastructure and systems subject to detailed compliance and risk review.' ),
+	'religious-organizations' => array( 'Religious Organizations', 'Connectivity, audio-visual, communications and support for administration and community engagement.' ),
+	'construction'          => array( 'Construction Companies', 'Site connectivity, surveillance, communications and mobile-team technology.' ),
+	'real-estate'           => array( 'Real Estate Developers', 'Property connectivity, access systems, surveillance and smart infrastructure planning.' ),
+	'smes'                  => array( 'SMEs', 'Practical technology foundations that can grow with the team without unnecessary complexity.' ),
+	'residential'           => array( 'Homes & Residential Estates', 'Internet, Wi-Fi, security and connected-home infrastructure shaped around the property.' ),
+);
+
+foreach ( $industries as $slug => $industry ) {
+	if ( get_page_by_path( $slug, OBJECT, 'endpoint_industry' ) ) {
+		continue;
+	}
+
+	wp_insert_post(
+		array(
+			'post_type'    => 'endpoint_industry',
+			'post_status'  => 'publish',
+			'post_title'   => $industry[0],
+			'post_name'    => $slug,
+			'post_excerpt' => $industry[1],
+			'post_content' => '<p>' . esc_html( $industry[1] ) . '</p><h2>Start with the environment</h2><p>Industry needs, compliance, users, sites and continuity expectations are reviewed before any service combination is recommended. Published customer evidence will be added only with approval.</p>',
+		)
+	);
+}
+
+$insights = array(
+	'planning-business-wifi-nairobi' => array(
+		'Planning Business Wi-Fi: Coverage Is Only the Beginning',
+		'Reliable Wi-Fi depends on capacity, interference, roaming, security and the applications people actually use.',
+		'<p>A strong signal icon does not guarantee a dependable Wi-Fi experience. Business Wi-Fi must be planned around how many devices connect, where people move, which applications matter and what the building does to radio signals.</p><h2>Start with users and applications</h2><p>Video calls, cloud systems, guest access and handheld devices create different demands. Document peak usage and critical areas before choosing equipment.</p><h2>Separate coverage from capacity</h2><p>One powerful access point may cover a large space but still become congested. Multiple correctly positioned access points can distribute demand and improve roaming.</p><h2>Validate after installation</h2><p>Test real devices in working conditions, document configuration and plan how firmware, passwords and guest access will be maintained.</p>',
+	),
+	'cybersecurity-baseline-for-smes' => array(
+		'A Practical Cybersecurity Baseline for SMEs',
+		'Good security begins with identity, updates, recovery and clear responsibility—not an oversized stack of tools.',
+		'<p>Smaller organizations can reduce significant risk by getting a few foundations consistently right.</p><h2>Protect identities</h2><p>Use multifactor authentication, unique administrator accounts and a documented process for staff joining, changing roles or leaving.</p><h2>Maintain systems</h2><p>Keep supported software current, remove unused accounts and applications, and review internet-facing services.</p><h2>Prepare for recovery</h2><p>Back up important data, separate at least one recovery copy, and test that it can be restored. Record who makes decisions during an incident.</p><p>No organization can be promised complete security. The goal is to reduce likelihood, limit impact and improve recovery.</p>',
+	),
+	'ict-procurement-checklist' => array(
+		'An ICT Procurement Checklist Beyond the Purchase Price',
+		'Compatibility, ownership, warranty and support determine whether technology remains useful after delivery.',
+		'<p>The lowest purchase price can become expensive when equipment is incompatible, unsupported or difficult to replace.</p><h2>Confirm the requirement</h2><p>Document users, environment, performance, interfaces, power and security needs before selecting a model.</p><h2>Check the full lifecycle</h2><p>Review genuine sourcing, licensing, warranty, updates, consumables, installation, training and end-of-life handling.</p><h2>Protect ownership</h2><p>Ensure the organization controls domains, cloud tenants, administrator access, subscriptions and documentation. Agree what happens when a supplier relationship ends.</p>',
+	),
+);
+
+foreach ( $insights as $slug => $insight ) {
+	if ( get_page_by_path( $slug, OBJECT, 'post' ) ) {
+		continue;
+	}
+
+	wp_insert_post(
+		array(
+			'post_type'    => 'post',
+			'post_status'  => 'publish',
+			'post_title'   => $insight[0],
+			'post_name'    => $slug,
+			'post_excerpt' => $insight[1],
+			'post_content' => $insight[2],
 		)
 	);
 }

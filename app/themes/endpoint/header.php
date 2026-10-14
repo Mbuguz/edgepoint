@@ -59,11 +59,10 @@ defined( 'ABSPATH' ) || exit;
 				?>
 				<ul class="primary-nav__list">
 					<li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Services', 'endpoint' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/products/' ) ); ?>"><?php esc_html_e( 'Products', 'endpoint' ); ?></a></li>
 					<li><a href="<?php echo esc_url( home_url( '/industries/' ) ); ?>"><?php esc_html_e( 'Industries', 'endpoint' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/projects/' ) ); ?>"><?php esc_html_e( 'Portfolio', 'endpoint' ); ?></a></li>
-					<li><a href="<?php echo esc_url( home_url( '/insights/' ) ); ?>"><?php esc_html_e( 'Insights', 'endpoint' ); ?></a></li>
 					<li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About', 'endpoint' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/insights/' ) ); ?>"><?php esc_html_e( 'Insights', 'endpoint' ); ?></a></li>
+					<li><a href="<?php echo esc_url( home_url( '/support/' ) ); ?>"><?php esc_html_e( 'Support', 'endpoint' ); ?></a></li>
 					<li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact', 'endpoint' ); ?></a></li>
 				</ul>
 				<?php

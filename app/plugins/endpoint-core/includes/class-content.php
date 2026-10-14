@@ -273,7 +273,11 @@ final class Endpoint_Core_Content {
 	 * @return void
 	 */
 	public static function archive_size( $query ) {
-		if ( is_admin() || ! $query->is_main_query() || ! $query->is_post_type_archive( 'endpoint_service' ) ) {
+		if (
+			is_admin()
+			|| ! $query->is_main_query()
+			|| ! $query->is_post_type_archive( array( 'endpoint_service', 'endpoint_industry' ) )
+		) {
 			return;
 		}
 

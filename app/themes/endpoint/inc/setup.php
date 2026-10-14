@@ -133,3 +133,21 @@ function endpoint_defer_navigation_script( $tag, $handle ) {
 	return str_replace( ' src=', ' defer src=', $tag );
 }
 add_filter( 'script_loader_tag', 'endpoint_defer_navigation_script', 10, 2 );
+
+/**
+ * Preload the small local variable font used above the fold.
+ *
+ * @return void
+ */
+function endpoint_preload_font() {
+	?>
+	<link
+		rel="preload"
+		href="<?php echo esc_url( get_template_directory_uri() . '/assets/fonts/manrope-latin.woff2' ); ?>"
+		as="font"
+		type="font/woff2"
+		crossorigin
+	>
+	<?php
+}
+add_action( 'wp_head', 'endpoint_preload_font', 1 );

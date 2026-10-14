@@ -16,3 +16,11 @@ employee, customer site, project, or facility.
 - File: `assets/images/logo-mark.svg`
 - Created for this repository
 - Licence: included with the theme under GPL-2.0-or-later
+
+## Manrope variable font
+
+- File: `assets/fonts/manrope-latin.woff2`
+- Source: [Google Fonts — Manrope](https://fonts.google.com/specimen/Manrope)
+- Copyright: Manrope Project Authors
+- Licence: SIL Open Font License 1.1
+- Licence file: `assets/fonts/OFL.txt`
