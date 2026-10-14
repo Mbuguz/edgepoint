@@ -214,6 +214,11 @@ $insights = array(
 	),
 );
 
+$default_post = get_page_by_path( 'hello-world', OBJECT, 'post' );
+if ( $default_post ) {
+	wp_delete_post( $default_post->ID, true );
+}
+
 foreach ( $insights as $slug => $insight ) {
 	if ( get_page_by_path( $slug, OBJECT, 'post' ) ) {
 		continue;
