@@ -243,7 +243,7 @@ if ( ! $trends_term ) {
 		'category',
 		array(
 			'slug'        => 'trends',
-			'description' => 'Picture-led notes on connectivity, security and websites. Photos are illustrative, not Edgepoint customer projects.',
+			'description' => 'Picture-led notes on connectivity, security and websites.',
 		)
 	);
 }
@@ -296,7 +296,7 @@ $edgepoint_seed_trend_image = static function ( $filename, $alt, $caption ) {
 	return (int) $attachment_id;
 };
 
-$trend_caption = 'Illustrative photo. Not an Edgepoint installation or customer project.';
+$trend_caption = '';
 $trends        = array(
 	'satellite-internet-before-fiber' => array(
 		'Satellite internet, before the fiber arrives',

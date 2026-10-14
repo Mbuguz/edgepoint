@@ -40,7 +40,7 @@ $shown        = 0;
 		<?php if ( is_home() ) : ?>
 			<p class="archive-heading__lead"><?php esc_html_e( 'Practical notes on connectivity, security and the websites that present the work. Trends are the updates that carry a picture.', 'edgepoint' ); ?></p>
 		<?php elseif ( $is_trends ) : ?>
-			<p class="archive-heading__lead"><?php esc_html_e( 'Each trend has a picture of the technology being discussed. The photos are illustrative. They are not Edgepoint installations or customer projects.', 'edgepoint' ); ?></p>
+			<p class="archive-heading__lead"><?php esc_html_e( 'Each trend has a picture of the technology being discussed.', 'edgepoint' ); ?></p>
 		<?php else : ?>
 			<?php the_archive_description( '<div class="archive-heading__description">', '</div>' ); ?>
 		<?php endif; ?>

@@ -241,7 +241,6 @@ $capabilities = array(
 						alt="<?php esc_attr_e( 'Technology team collaborating around laptops in a bright workspace', 'edgepoint' ); ?>"
 					>
 				</picture>
-				<figcaption><?php esc_html_e( 'Demonstrative image; not an Edgepoint employee or customer project.', 'edgepoint' ); ?></figcaption>
 			</figure>
 		</div>
 	</section>

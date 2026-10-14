@@ -22,7 +22,7 @@ function edgepoint_ensure_trends_category() {
 		'category',
 		array(
 			'slug'        => 'trends',
-			'description' => __( 'Picture-led notes on connectivity, security and websites. Photos are illustrative, not Edgepoint customer projects.', 'edgepoint' ),
+			'description' => __( 'Picture-led notes on connectivity, security and websites.', 'edgepoint' ),
 		)
 	);
 }

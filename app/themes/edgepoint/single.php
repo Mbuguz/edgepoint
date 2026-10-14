@@ -33,9 +33,6 @@ get_header();
 				<?php $edgepoint_image_id = get_post_thumbnail_id(); ?>
 				<figure class="entry__image">
 					<?php the_post_thumbnail( 'large' ); ?>
-					<?php if ( wp_get_attachment_caption( $edgepoint_image_id ) ) : ?>
-						<figcaption><?php echo esc_html( wp_get_attachment_caption( $edgepoint_image_id ) ); ?></figcaption>
-					<?php endif; ?>
 				</figure>
 			<?php elseif ( edgepoint_is_trend() ) : ?>
 				<p class="entry__lead"><?php esc_html_e( 'This trend is waiting for its picture before it is listed on Insights.', 'edgepoint' ); ?></p>
