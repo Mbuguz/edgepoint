@@ -67,7 +67,7 @@ $programmes = array(
 		'summary' => __( 'Coordinate physical security, cyber controls, identity and recovery around real operational risk.', 'edgepoint' ),
 		'items'   => array(
 			__( 'CCTV, access control and alarms', 'edgepoint' ),
-			__( 'Edgepoint, email and network security', 'edgepoint' ),
+			__( 'Firewall, email and network security', 'edgepoint' ),
 			__( 'Backup and disaster recovery', 'edgepoint' ),
 		),
 	),
@@ -125,6 +125,19 @@ $industries = array(
 	__( 'SMEs', 'edgepoint' ),
 	__( 'Homes & estates', 'edgepoint' ),
 );
+
+$capabilities = array(
+	__( 'Internet', 'edgepoint' ),
+	__( 'Networks', 'edgepoint' ),
+	__( 'Starlink', 'edgepoint' ),
+	__( 'Cybersecurity', 'edgepoint' ),
+	__( 'Software', 'edgepoint' ),
+	__( 'Cloud', 'edgepoint' ),
+	__( 'CCTV', 'edgepoint' ),
+	__( 'ICT support', 'edgepoint' ),
+	__( 'Telecommunications', 'edgepoint' ),
+	__( 'Digital growth', 'edgepoint' ),
+);
 ?>
 
 <main id="main">
@@ -142,6 +155,7 @@ $industries = array(
 					<a class="button button--accent" href="<?php echo esc_url( home_url( '/services/' ) ); ?>"><?php esc_html_e( 'Explore our capabilities', 'edgepoint' ); ?> <span aria-hidden="true">↗</span></a>
 					<a class="button button--ghost-light" href="<?php echo esc_url( home_url( '/get-a-quote/' ) ); ?>"><?php esc_html_e( 'Plan a solution', 'edgepoint' ); ?></a>
 				</div>
+				<p class="hero__craft"><a href="#website-craft"><?php esc_html_e( 'We design websites like this one.', 'edgepoint' ); ?></a></p>
 			</div>
 			<div class="hero-visual" data-reveal>
 				<div class="hero-visual__orbit hero-visual__orbit--one"></div>
@@ -233,17 +247,66 @@ $industries = array(
 	</section>
 
 	<section class="capability-ribbon" aria-label="<?php esc_attr_e( 'Edgepoint capabilities', 'edgepoint' ); ?>">
-		<div>
-			<span><?php esc_html_e( 'Internet', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'Networks', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'Starlink', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'Cybersecurity', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'Software', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'Cloud', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'CCTV', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'ICT support', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'Telecommunications', 'edgepoint' ); ?></span>
-			<span><?php esc_html_e( 'Digital growth', 'edgepoint' ); ?></span>
+		<div class="capability-ribbon__track">
+			<?php for ( $ribbon_copy = 0; $ribbon_copy < 2; $ribbon_copy++ ) : ?>
+				<div<?php echo 1 === $ribbon_copy ? ' aria-hidden="true"' : ''; ?>>
+					<?php foreach ( $capabilities as $capability ) : ?>
+						<span><?php echo esc_html( $capability ); ?></span>
+					<?php endforeach; ?>
+				</div>
+			<?php endfor; ?>
+		</div>
+	</section>
+
+	<section class="section studio" id="website-craft">
+		<div class="wrap studio__layout">
+			<div class="studio__copy" data-reveal>
+				<p class="eyebrow"><?php esc_html_e( 'Websites we design', 'edgepoint' ); ?></p>
+				<h2><?php esc_html_e( 'This page is the kind of website we build.', 'edgepoint' ); ?></h2>
+				<p><?php esc_html_e( 'Edgepoint designs sites for businesses that sell infrastructure, security and services. The page you are on is the example: your colours, your logo, and a clear way to call or write.', 'edgepoint' ); ?></p>
+				<ul class="studio__points">
+					<li>
+						<strong><?php esc_html_e( 'Your identity stays in front.', 'edgepoint' ); ?></strong>
+						<?php esc_html_e( 'Sky blue, white and the real mark are kept. The layout is written for the business, not pulled from a generic template.', 'edgepoint' ); ?>
+					</li>
+					<li>
+						<strong><?php esc_html_e( 'The page is built to be read.', 'edgepoint' ); ?></strong>
+						<?php esc_html_e( 'Type, spacing and images stay light so the site opens cleanly on a phone and stays comfortable to scan.', 'edgepoint' ); ?>
+					</li>
+					<li>
+						<strong><?php esc_html_e( 'Reaching you is obvious.', 'edgepoint' ); ?></strong>
+						<?php esc_html_e( 'Phone, email, WhatsApp and the quote form sit where a visitor looks first.', 'edgepoint' ); ?>
+					</li>
+				</ul>
+				<div class="studio__actions">
+					<a class="button button--accent" href="<?php echo esc_url( home_url( '/services/software-website-development/' ) ); ?>"><?php esc_html_e( 'Scope a website', 'edgepoint' ); ?> <span aria-hidden="true">↗</span></a>
+					<a class="text-link" href="<?php echo esc_url( home_url( '/get-a-quote/' ) ); ?>"><?php esc_html_e( 'Request a website quote', 'edgepoint' ); ?> <span aria-hidden="true">→</span></a>
+				</div>
+			</div>
+			<figure class="studio-stage" data-reveal>
+				<div class="studio-frame" aria-hidden="true">
+					<div class="studio-frame__chrome">
+						<span></span>
+						<span></span>
+						<span></span>
+						<p>edgepoint-internet.com</p>
+					</div>
+					<div class="studio-frame__page">
+						<div class="studio-frame__bar">
+							<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-mark.png' ); ?>" width="480" height="359" alt="">
+							<div class="studio-frame__nav"><i></i><i></i><i></i></div>
+						</div>
+						<p class="studio-frame__kicker"><?php esc_html_e( 'Nairobi', 'edgepoint' ); ?></p>
+						<p class="studio-frame__title"><?php esc_html_e( 'Connected', 'edgepoint' ); ?><br><em><?php esc_html_e( 'Secure', 'edgepoint' ); ?></em><br><?php esc_html_e( 'Digital', 'edgepoint' ); ?></p>
+						<div class="studio-frame__chips">
+							<b><?php esc_html_e( 'Internet', 'edgepoint' ); ?></b>
+							<b><?php esc_html_e( 'Security', 'edgepoint' ); ?></b>
+							<b><?php esc_html_e( 'Websites', 'edgepoint' ); ?></b>
+						</div>
+					</div>
+				</div>
+				<figcaption><?php esc_html_e( 'A drawing of this homepage. The live page is the finished example.', 'edgepoint' ); ?></figcaption>
+			</figure>
 		</div>
 	</section>
 
