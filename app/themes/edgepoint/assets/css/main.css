@@ -2702,3 +2702,47 @@ ol {
 	font-size: 0.78rem;
 	margin-top: 0.65rem;
 }
+
+.work-pair {
+	display: grid;
+}
+
+.work-pair figure {
+	margin: 0;
+}
+
+.work-pair img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.work-pair__main img {
+	aspect-ratio: 4 / 3;
+	border-radius: var(--radius-lg);
+	box-shadow: 0 30px 80px rgb(0 0 0 / 28%);
+	object-fit: cover;
+}
+
+.work-pair__accent {
+	justify-self: start;
+	margin-inline-start: 7%;
+	margin-top: -24%;
+	width: min(44%, 15.5rem);
+	z-index: 1;
+}
+
+.work-pair__accent img {
+	aspect-ratio: 3 / 4;
+	border: 0.35rem solid var(--white);
+	border-radius: 1.15rem;
+	box-shadow: 0 18px 44px rgb(0 32 58 / 38%);
+	object-fit: cover;
+}
+
+@media (max-width: 48rem) {
+	.work-pair__accent {
+		margin-top: -30%;
+		width: 46%;
+	}
+}

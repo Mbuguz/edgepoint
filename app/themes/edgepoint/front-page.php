@@ -335,18 +335,32 @@ $capabilities = array(
 
 	<section class="section infrastructure-story">
 		<div class="wrap infrastructure-story__grid">
-			<figure data-reveal>
-				<picture>
-					<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/network-infrastructure.webp' ); ?>" type="image/webp">
-					<img
-						src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/network-infrastructure.jpg' ); ?>"
-						width="1600"
-						height="836"
-						loading="lazy"
-						alt="<?php esc_attr_e( 'Network cables connected to data-centre equipment', 'edgepoint' ); ?>"
-					>
-				</picture>
-			</figure>
+			<div class="work-pair" data-reveal>
+				<figure class="work-pair__main">
+					<picture>
+						<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-structured-cabling.webp' ); ?>" type="image/webp">
+						<img
+							src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-structured-cabling.jpg' ); ?>"
+							width="1600"
+							height="1200"
+							loading="lazy"
+							alt="<?php esc_attr_e( 'Network switch and structured cabling installed on a white wall', 'edgepoint' ); ?>"
+						>
+					</picture>
+				</figure>
+				<figure class="work-pair__accent">
+					<picture>
+						<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-cctv-install.webp' ); ?>" type="image/webp">
+						<img
+							src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-cctv-install.jpg' ); ?>"
+							width="900"
+							height="1200"
+							loading="lazy"
+							alt="<?php esc_attr_e( 'Two outdoor cameras mounted on a dark exterior wall', 'edgepoint' ); ?>"
+						>
+					</picture>
+				</figure>
+			</div>
 			<div data-reveal>
 				<p class="eyebrow eyebrow--light"><?php esc_html_e( 'Built for operational reality', 'edgepoint' ); ?></p>
 				<h2><?php esc_html_e( 'The visible installation is only part of the solution.', 'edgepoint' ); ?></h2>
