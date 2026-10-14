@@ -1,6 +1,6 @@
-Endpoint Internet Solution preview release
+Edgepoint Internets Solutions Ltd preview release
 Version: 0.1.0
-Commit: cb1f4da
+Commit: 1d708c0
 Mode: PREVIEW ONLY
 
 The phone number, email, social profiles, legal copy, form recipient and final
