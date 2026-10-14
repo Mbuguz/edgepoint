@@ -7,7 +7,7 @@ Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Portable content, enquiry, business settings, and SEO foundations for Edgepoint Internets Solutions Ltd.
+Portable content, enquiry, business settings, and SEO foundations for Edgepoint Internet Solutions Ltd.
 
 == Description ==
 

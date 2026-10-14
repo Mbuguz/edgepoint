@@ -27,9 +27,9 @@ experience, or outcomes.
 
 ## Verified inputs and later confirmations
 
-- Initial brief name: **Edgepoint Internets Solutions Ltd**.
+- Initial brief name: **Edgepoint Internet Solutions Ltd**.
 - Client-confirmed display name on 2026-10-13:
-  **Edgepoint Internets Solutions Ltd**. Legal registration wording remains unverified.
+  **Edgepoint Internet Solutions Ltd**. Legal registration wording remains unverified.
 - Public website URL supplied by client:
   `https://edgepoint-internet.com/`.
 - Platform and delivery model: WordPress on shared cPanel hosting; installable

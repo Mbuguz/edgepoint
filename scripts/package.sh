@@ -28,7 +28,7 @@ mkdir -p "$DIST"
 )
 
 cat > "$DIST/RELEASE.txt" <<EOF
-Edgepoint Internets Solutions Ltd preview release
+Edgepoint Internet Solutions Ltd preview release
 Version: $VERSION
 Commit: $(git -C "$ROOT" rev-parse --short HEAD 2>/dev/null || echo uncommitted)
 Mode: PREVIEW ONLY

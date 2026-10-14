@@ -1,4 +1,4 @@
-# Edgepoint Internets Solutions Ltd
+# Edgepoint Internet Solutions Ltd
 
 WordPress website source for [edgepoint-internet.com](https://edgepoint-internet.com/).
 
@@ -13,7 +13,7 @@ No live website changes are made automatically from this repository.
 
 ## Confirmed preview details
 
-- Display name: Edgepoint Internets Solutions Ltd
+- Display name: Edgepoint Internet Solutions Ltd
 - Office: Counter Business Center, Shop B08, Kasarani, Nairobi
 - Service area: Kasarani, Nairobi, Ruiru, Gwakairu, and the surrounding Nairobi
   metropolitan area

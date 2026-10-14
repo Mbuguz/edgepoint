@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Edgepoint Core
  * Plugin URI: https://edgepoint-internet.com/
- * Description: Portable content, enquiry, business settings, and SEO foundations for Edgepoint Internets Solutions Ltd.
+ * Description: Portable content, enquiry, business settings, and SEO foundations for Edgepoint Internet Solutions Ltd.
  * Version: 0.1.1
  * Requires at least: 6.6
  * Requires PHP: 8.1
- * Author: Edgepoint Internets Solutions Ltd
+ * Author: Edgepoint Internet Solutions Ltd
  * License: GPL-2.0-or-later
  * Text Domain: edgepoint-core
  *

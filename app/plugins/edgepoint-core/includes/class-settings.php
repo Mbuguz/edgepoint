@@ -30,7 +30,7 @@ final class Edgepoint_Core_Settings {
 	 */
 	public static function defaults() {
 		return array(
-			'name'         => 'Edgepoint Internets Solutions Ltd',
+			'name'         => 'Edgepoint Internet Solutions Ltd',
 			'phone'        => '0754 931 100',
 			'email'        => 'edgepointinternet@gmail.com',
 			'address'      => 'Counter Business Center, Shop B08, Kasarani, Nairobi',
