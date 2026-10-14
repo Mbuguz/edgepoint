@@ -346,7 +346,6 @@ $capabilities = array(
 						alt="<?php esc_attr_e( 'Network cables connected to data-centre equipment', 'edgepoint' ); ?>"
 					>
 				</picture>
-				<figcaption><?php esc_html_e( 'Contextual infrastructure image; final project photography requires permission.', 'edgepoint' ); ?></figcaption>
 			</figure>
 			<div data-reveal>
 				<p class="eyebrow eyebrow--light"><?php esc_html_e( 'Built for operational reality', 'edgepoint' ); ?></p>
