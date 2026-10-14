@@ -3,7 +3,7 @@
  * Plugin Name: Edgepoint Core
  * Plugin URI: https://edgepoint-internet.com/
  * Description: Portable content, enquiry, business settings, and SEO foundations for Edgepoint Internets Solutions Ltd.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 6.6
  * Requires PHP: 8.1
  * Author: Edgepoint Internets Solutions Ltd
@@ -15,7 +15,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'EDGEPOINT_CORE_VERSION', '0.1.0' );
+define( 'EDGEPOINT_CORE_VERSION', '0.1.1' );
 define( 'EDGEPOINT_CORE_FILE', __FILE__ );
 define( 'EDGEPOINT_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'EDGEPOINT_CORE_URL', plugin_dir_url( __FILE__ ) );

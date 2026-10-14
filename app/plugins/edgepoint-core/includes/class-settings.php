@@ -31,16 +31,17 @@ final class Edgepoint_Core_Settings {
 	public static function defaults() {
 		return array(
 			'name'         => 'Edgepoint Internets Solutions Ltd',
-			'phone'        => '+254 700 000 000',
-			'email'        => 'hello@example.com',
+			'phone'        => '0754 931 100',
+			'email'        => 'edgepointinternet@gmail.com',
 			'address'      => 'Counter Business Center, Shop B08, Kasarani, Nairobi',
 			'service_area' => 'Kasarani, Nairobi, Ruiru, Gwakairu and the surrounding Nairobi metropolitan area',
 			'hours'        => '24/7',
-			'quote_email'  => '',
-			'facebook'     => '',
+			'quote_email'  => 'edgepointinternet@gmail.com',
+			'facebook'     => 'https://www.facebook.com/profile.php?id=61592300426611',
 			'instagram'    => '',
 			'linkedin'     => '',
-			'x'            => '',
+			'tiktok'       => 'https://www.tiktok.com/@edgepoint.internet',
+			'x'            => 'https://x.com/Edgepointt',
 			'demo_mode'    => 1,
 		);
 	}
@@ -106,6 +107,7 @@ final class Edgepoint_Core_Settings {
 		$clean['facebook']     = esc_url_raw( $input['facebook'] ?? '' );
 		$clean['instagram']    = esc_url_raw( $input['instagram'] ?? '' );
 		$clean['linkedin']     = esc_url_raw( $input['linkedin'] ?? '' );
+		$clean['tiktok']       = esc_url_raw( $input['tiktok'] ?? '' );
 		$clean['x']            = esc_url_raw( $input['x'] ?? '' );
 		$clean['demo_mode']    = empty( $input['demo_mode'] ) ? 0 : 1;
 
@@ -162,6 +164,7 @@ final class Edgepoint_Core_Settings {
 			'facebook'     => array( __( 'Facebook URL', 'edgepoint-core' ), 'url' ),
 			'instagram'    => array( __( 'Instagram URL', 'edgepoint-core' ), 'url' ),
 			'linkedin'     => array( __( 'LinkedIn URL', 'edgepoint-core' ), 'url' ),
+			'tiktok'       => array( __( 'TikTok URL', 'edgepoint-core' ), 'url' ),
 			'x'            => array( __( 'X URL', 'edgepoint-core' ), 'url' ),
 		);
 		?>

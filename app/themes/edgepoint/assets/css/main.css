@@ -199,10 +199,31 @@ ol {
 	color: var(--ink-950);
 }
 
-.brand__mark {
-	flex: 0 0 2.75rem;
-	height: 2.75rem;
-	width: 2.75rem;
+.brand__logo {
+	display: block;
+	height: 4.6rem;
+	width: auto;
+}
+
+.site-footer .brand__logo {
+	background: #fff;
+	border-radius: 0.85rem;
+	height: 5.4rem;
+	padding: 0.35rem 0.55rem;
+}
+
+.contact-lines {
+	display: grid;
+	gap: 0.35rem;
+}
+
+.social-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem 0.9rem;
+	list-style: none;
+	margin-top: 0.8rem;
+	padding: 0;
 }
 
 .brand__text {
@@ -1098,9 +1119,13 @@ ol {
 		justify-content: center;
 	}
 
-	.utility p span:not(:first-child),
-	.utility a {
+	.utility p span,
+	.utility__contact {
 		display: none;
+	}
+
+	.utility__phone {
+		display: inline;
 	}
 
 	.hero {
@@ -2093,8 +2118,8 @@ ol {
 }
 
 .hero-visual__core img {
-	height: 3.7rem;
-	width: 3.7rem;
+	height: 3.4rem;
+	width: auto;
 }
 
 .hero-visual__orbit {

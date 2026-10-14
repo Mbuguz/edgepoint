@@ -35,7 +35,18 @@ defined( 'ABSPATH' ) || exit;
 			<h2><?php esc_html_e( 'Visit us', 'edgepoint' ); ?></h2>
 			<address><?php echo esc_html( edgepoint_business_detail( 'address' ) ); ?></address>
 			<p><?php echo esc_html( edgepoint_business_detail( 'service_area' ) ); ?></p>
-			<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact details', 'edgepoint' ); ?></a>
+			<p class="contact-lines">
+				<a href="<?php echo esc_url( edgepoint_phone_href( edgepoint_business_detail( 'phone' ) ) ); ?>"><?php echo esc_html( edgepoint_phone_label( edgepoint_business_detail( 'phone' ) ) ); ?></a>
+				<a href="<?php echo esc_url( 'mailto:' . edgepoint_business_detail( 'email' ) ); ?>"><?php echo esc_html( edgepoint_business_detail( 'email' ) ); ?></a>
+			</p>
+			<?php $social_links = edgepoint_social_links(); ?>
+			<?php if ( $social_links ) : ?>
+				<ul class="social-links">
+					<?php foreach ( $social_links as $social_link ) : ?>
+						<li><a href="<?php echo esc_url( $social_link['url'] ); ?>"><?php echo esc_html( $social_link['label'] ); ?></a></li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
 		</div>
 	</div>
 	<div class="wrap site-footer__bottom">

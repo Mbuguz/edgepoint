@@ -18,7 +18,7 @@ $pages = array(
 	),
 	'support'       => array(
 		'title'   => 'Support',
-		'content' => '<p>Need help with an existing installation, network, system or service? Share the equipment or service involved, what changed, and the impact on your users.</p><h2>Before requesting support</h2><ul><li>Record any error message without sharing passwords.</li><li>Note when the issue began and who is affected.</li><li>Keep equipment powered safely unless there is an electrical or physical hazard.</li></ul><p>This preview does not yet publish a verified support number or service-level commitment.</p>',
+		'content' => '<p>Need help with an existing installation, network, system or service? Share the equipment or service involved, what changed, and the impact on your users.</p><h2>Before requesting support</h2><ul><li>Record any error message without sharing passwords.</li><li>Note when the issue began and who is affected.</li><li>Keep equipment powered safely unless there is an electrical or physical hazard.</li></ul><p>Call <a href="tel:+254754931100">0754 931 100</a> or email <a href="mailto:edgepointinternet@gmail.com">edgepointinternet@gmail.com</a>.</p>',
 	),
 	'careers'       => array(
 		'title'   => 'Careers',
@@ -26,11 +26,11 @@ $pages = array(
 	),
 	'contact'       => array(
 		'title'   => 'Contact',
-		'content' => '<h2>Visit our office</h2><p><strong>Counter Business Center, Shop B08<br>Kasarani, Nairobi</strong></p><p>Service planning covers Kasarani, Nairobi, Ruiru, Gwakairu and surrounding Nairobi metropolitan areas.</p><h2>Preview contact details</h2><p>Phone: +254 700 000 000 (demo)<br>Email: hello@example.com (demo)</p><p>Verified contact and social details will replace these placeholders before production release.</p>',
+		'content' => '<h2>Visit our office</h2><p><strong>Counter Business Center, Shop B08<br>Kasarani, Nairobi</strong></p><p>Service planning covers Kasarani, Nairobi, Ruiru, Gwakairu and surrounding Nairobi metropolitan areas.</p><h2>Call or email</h2><p>Phone: <a href="tel:+254754931100">0754 931 100</a><br>Email: <a href="mailto:edgepointinternet@gmail.com">edgepointinternet@gmail.com</a></p><p>Facebook, TikTok and X links are published from the verified business profile.</p>',
 	),
 	'get-a-quote'   => array(
 		'title'   => 'Get a Quote',
-		'content' => '<p>Tell us what you need, where the project is located and the outcome you want. This preview validates the form but does not store or deliver personal information.</p>[edgepoint_quote_form]',
+		'content' => '<p>Tell us what you need, where the project is located and the outcome you want. We will reply using the phone number or email you provide.</p>[edgepoint_quote_form]',
 	),
 	'privacy-policy' => array(
 		'title'   => 'Privacy Policy',

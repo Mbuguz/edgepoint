@@ -159,7 +159,7 @@ $industries = array(
 					</picture>
 				</div>
 				<div class="hero-visual__core">
-					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-mark.svg' ); ?>" width="88" height="88" alt="">
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-mark.png' ); ?>" width="480" height="359" alt="">
 				</div>
 				<span class="hero-visual__node hero-visual__node--a" aria-hidden="true"></span>
 				<span class="hero-visual__node hero-visual__node--b" aria-hidden="true"></span>

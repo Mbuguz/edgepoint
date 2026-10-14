@@ -12,6 +12,7 @@ defined( 'ABSPATH' ) || exit;
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-mark.png' ); ?>" type="image/png">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -21,11 +22,13 @@ defined( 'ABSPATH' ) || exit;
 <div class="utility">
 	<div class="wrap utility__inner">
 		<p>
+			<a class="utility__phone" href="<?php echo esc_url( edgepoint_phone_href( edgepoint_business_detail( 'phone' ) ) ); ?>"><?php echo esc_html( edgepoint_phone_label( edgepoint_business_detail( 'phone' ) ) ); ?></a>
+			<span aria-hidden="true">•</span>
 			<span><?php esc_html_e( '24/7 service availability', 'edgepoint' ); ?></span>
 			<span aria-hidden="true">•</span>
 			<span><?php echo esc_html( edgepoint_business_detail( 'address' ) ); ?></span>
 		</p>
-		<a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
+		<a class="utility__contact" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">
 			<?php esc_html_e( 'Contact Edgepoint', 'edgepoint' ); ?>
 		</a>
 	</div>

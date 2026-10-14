@@ -137,6 +137,7 @@ final class Edgepoint_Core_Seo {
 					$settings['facebook'],
 					$settings['instagram'],
 					$settings['linkedin'],
+					$settings['tiktok'] ?? '',
 					$settings['x'],
 				)
 			);

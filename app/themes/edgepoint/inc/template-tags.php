@@ -16,8 +16,8 @@ defined( 'ABSPATH' ) || exit;
 function edgepoint_business_detail( $key ) {
 	$defaults = array(
 		'name'         => 'Edgepoint Internets Solutions Ltd',
-		'phone'        => '+254 700 000 000',
-		'email'        => 'hello@example.com',
+		'phone'        => '0754 931 100',
+		'email'        => 'edgepointinternet@gmail.com',
 		'address'      => 'Counter Business Center, Shop B08, Kasarani, Nairobi',
 		'service_area' => 'Kasarani, Nairobi, Ruiru, Gwakairu and the surrounding Nairobi metropolitan area',
 		'hours'        => '24/7',
@@ -26,6 +26,65 @@ function edgepoint_business_detail( $key ) {
 	$value    = isset( $details[ $key ] ) ? $details[ $key ] : ( $defaults[ $key ] ?? '' );
 
 	return is_scalar( $value ) ? (string) $value : '';
+}
+
+/**
+ * Format a stored phone number for display.
+ *
+ * @param string $phone Raw phone number.
+ * @return string
+ */
+function edgepoint_phone_label( $phone ) {
+	$digits = preg_replace( '/\D+/', '', (string) $phone );
+	if ( 10 === strlen( $digits ) && str_starts_with( $digits, '0' ) ) {
+		return substr( $digits, 0, 4 ) . ' ' . substr( $digits, 4, 3 ) . ' ' . substr( $digits, 7 );
+	}
+
+	return trim( (string) $phone );
+}
+
+/**
+ * Build a tel link for a Kenyan or international number.
+ *
+ * @param string $phone Raw phone number.
+ * @return string
+ */
+function edgepoint_phone_href( $phone ) {
+	$digits = preg_replace( '/\D+/', '', (string) $phone );
+	if ( str_starts_with( $digits, '0' ) ) {
+		$digits = '254' . substr( $digits, 1 );
+	}
+
+	return 'tel:+' . $digits;
+}
+
+/**
+ * Return verified social profiles saved in business settings.
+ *
+ * @return array<int, array{label: string, url: string}>
+ */
+function edgepoint_social_links() {
+	$details = get_option( 'edgepoint_business_details', array() );
+	$labels  = array(
+		'facebook'  => __( 'Facebook', 'edgepoint' ),
+		'instagram' => __( 'Instagram', 'edgepoint' ),
+		'linkedin'  => __( 'LinkedIn', 'edgepoint' ),
+		'tiktok'    => __( 'TikTok', 'edgepoint' ),
+		'x'         => __( 'X', 'edgepoint' ),
+	);
+	$links   = array();
+
+	foreach ( $labels as $key => $label ) {
+		$url = isset( $details[ $key ] ) ? esc_url( (string) $details[ $key ] ) : '';
+		if ( $url ) {
+			$links[] = array(
+				'label' => $label,
+				'url'   => $url,
+			);
+		}
+	}
+
+	return $links;
 }
 
 /**
@@ -41,16 +100,12 @@ function edgepoint_brand() {
 	?>
 	<a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 		<img
-			class="brand__mark"
-			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-mark.svg' ); ?>"
-			width="44"
-			height="44"
-			alt=""
+			class="brand__logo"
+			src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-full.png' ); ?>"
+			width="720"
+			height="492"
+			alt="<?php echo esc_attr( edgepoint_business_detail( 'name' ) ); ?>"
 		/>
-		<span class="brand__text">
-			<strong><?php echo esc_html( edgepoint_business_detail( 'name' ) ); ?></strong>
-			<small><?php esc_html_e( 'Connect. Secure. Grow.', 'edgepoint' ); ?></small>
-		</span>
 	</a>
 	<?php
 }
