@@ -3,6 +3,7 @@
 ## Network infrastructure photograph
 
 - File: `assets/images/network-infrastructure.jpg`
+- Optimized derivative: `assets/images/network-infrastructure.webp`
 - Source: [Unsplash photo T-IN5o3kxyA](https://unsplash.com/photos/T-IN5o3kxyA)
 - Description: network cables connected to data-centre equipment
 - Licence: [Unsplash License](https://unsplash.com/license)
@@ -21,6 +22,7 @@ employee, customer site, project, or facility.
 
 - Files: `assets/images/connectivity-installation.jpg` and
   `assets/images/software-cloud-team.jpg`
+- Optimized derivatives: matching `.webp` files
 - Generated specifically for this repository
 - Licence: included with the theme under GPL-2.0-or-later
 

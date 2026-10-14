@@ -147,12 +147,16 @@ $industries = array(
 				<div class="hero-visual__orbit hero-visual__orbit--one"></div>
 				<div class="hero-visual__orbit hero-visual__orbit--two"></div>
 				<div class="hero-visual__photo">
-					<img
-						src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/connectivity-installation.jpg' ); ?>"
-						width="1280"
-						height="720"
-						alt="<?php esc_attr_e( 'ICT engineer testing network cabling in a modern office', 'endpoint' ); ?>"
-					>
+					<picture>
+						<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/connectivity-installation.webp' ); ?>" type="image/webp">
+						<img
+							src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/connectivity-installation.jpg' ); ?>"
+							width="1280"
+							height="720"
+							fetchpriority="high"
+							alt="<?php esc_attr_e( 'ICT engineer testing network cabling in a modern office', 'endpoint' ); ?>"
+						>
+					</picture>
 				</div>
 				<div class="hero-visual__core">
 					<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo-mark.svg' ); ?>" width="88" height="88" alt="">
@@ -213,13 +217,16 @@ $industries = array(
 				<a class="text-link" href="<?php echo esc_url( home_url( '/services/software-website-development/' ) ); ?>"><?php esc_html_e( 'Explore software and digital systems', 'endpoint' ); ?> <span aria-hidden="true">↗</span></a>
 			</div>
 			<figure data-reveal>
-				<img
-					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/software-cloud-team.jpg' ); ?>"
-					width="1280"
-					height="720"
-					loading="lazy"
-					alt="<?php esc_attr_e( 'Technology team collaborating around laptops in a bright workspace', 'endpoint' ); ?>"
-				>
+				<picture>
+					<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/software-cloud-team.webp' ); ?>" type="image/webp">
+					<img
+						src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/software-cloud-team.jpg' ); ?>"
+						width="1280"
+						height="720"
+						loading="lazy"
+						alt="<?php esc_attr_e( 'Technology team collaborating around laptops in a bright workspace', 'endpoint' ); ?>"
+					>
+				</picture>
 				<figcaption><?php esc_html_e( 'Demonstrative image; not an Endpoint employee or customer project.', 'endpoint' ); ?></figcaption>
 			</figure>
 		</div>
@@ -266,13 +273,16 @@ $industries = array(
 	<section class="section infrastructure-story">
 		<div class="wrap infrastructure-story__grid">
 			<figure data-reveal>
-				<img
-					src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/network-infrastructure.jpg' ); ?>"
-					width="1600"
-					height="836"
-					loading="lazy"
-					alt="<?php esc_attr_e( 'Network cables connected to data-centre equipment', 'endpoint' ); ?>"
-				>
+				<picture>
+					<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/network-infrastructure.webp' ); ?>" type="image/webp">
+					<img
+						src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/network-infrastructure.jpg' ); ?>"
+						width="1600"
+						height="836"
+						loading="lazy"
+						alt="<?php esc_attr_e( 'Network cables connected to data-centre equipment', 'endpoint' ); ?>"
+					>
+				</picture>
 				<figcaption><?php esc_html_e( 'Contextual infrastructure image; final project photography requires permission.', 'endpoint' ); ?></figcaption>
 			</figure>
 			<div data-reveal>
