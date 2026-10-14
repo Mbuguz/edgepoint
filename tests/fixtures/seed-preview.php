@@ -236,6 +236,123 @@ foreach ( $insights as $slug => $insight ) {
 	);
 }
 
+$trends_term = term_exists( 'trends', 'category' );
+if ( ! $trends_term ) {
+	$trends_term = wp_insert_term(
+		'Trends',
+		'category',
+		array(
+			'slug'        => 'trends',
+			'description' => 'Picture-led notes on connectivity, security and websites. Photos are illustrative, not Edgepoint customer projects.',
+		)
+	);
+}
+$trends_term_id = is_array( $trends_term ) ? (int) $trends_term['term_id'] : 0;
+
+/**
+ * Attach a theme image as a featured picture.
+ *
+ * @param string $filename Image filename inside the trends folder.
+ * @param string $alt      Alt text.
+ * @param string $caption  Public caption.
+ * @return int
+ */
+$edgepoint_seed_trend_image = static function ( $filename, $alt, $caption ) {
+	require_once ABSPATH . 'wp-admin/includes/file.php';
+	require_once ABSPATH . 'wp-admin/includes/media.php';
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+
+	$path = dirname( __DIR__, 2 ) . '/app/themes/edgepoint/assets/images/trends/' . $filename;
+	if ( ! is_readable( $path ) ) {
+		return 0;
+	}
+
+	$tmp = wp_tempnam( $filename );
+	if ( ! $tmp || ! copy( $path, $tmp ) ) {
+		return 0;
+	}
+
+	$attachment_id = media_handle_sideload(
+		array(
+			'name'     => $filename,
+			'tmp_name' => $tmp,
+		),
+		0,
+		$caption
+	);
+
+	if ( is_wp_error( $attachment_id ) ) {
+		return 0;
+	}
+
+	update_post_meta( $attachment_id, '_wp_attachment_image_alt', $alt );
+	wp_update_post(
+		array(
+			'ID'           => $attachment_id,
+			'post_excerpt' => $caption,
+		)
+	);
+
+	return (int) $attachment_id;
+};
+
+$trend_caption = 'Illustrative photo. Not an Edgepoint installation or customer project.';
+$trends        = array(
+	'satellite-internet-before-fiber' => array(
+		'Satellite internet, before the fiber arrives',
+		'A dish can bring a site online where a cable is still months away. The useful question is what the link is for, and what happens when the weather or the power changes.',
+		'<p>Some sites around Nairobi still wait on fiber. A satellite link can carry email, payments and a camera feed while that wait continues. It is a real option. It is not a copy of a fiber line.</p><h2>Decide what the link must carry</h2><p>A till, a few laptops and a guest Wi-Fi network ask for different things. Write down the busy hour and the jobs that cannot stop. That decides whether satellite is a bridge or the main connection.</p><h2>Plan the unglamorous parts</h2><p>The dish needs a clear view of the sky, a safe mount, power, and a path to the router inside. Rain, obstruction and a dead backup battery will show up in real use. Test those before calling the job finished.</p><h2>Keep a way back to fiber</h2><p>When a cable does arrive, the network should be able to use it without rebuilding every setting. Treat the satellite link as one connection in the plan, not as a box that nobody is allowed to touch later.</p>',
+		'trend-satellite-orbit.jpg',
+		'View of Earth and cloud cover from orbit, with part of a spacecraft in the frame',
+	),
+	'office-router-is-not-a-network' => array(
+		'One router in the corner is not a business network',
+		'Home routers are showing up in shops and small offices. Coverage, guest access and who holds the password matter more than the number of antennas.',
+		'<p>A single router can feel like enough on a quiet day. It gets less comfortable when the shop, the office and the customers are all online at once.</p><h2>Separate the people from the work</h2><p>Staff devices and guest phones should not share one open network. A guest network, a written password and a named administrator keep a simple setup from becoming everybody’s network.</p><h2>Coverage is not the same as capacity</h2><p>A strong signal at the counter does not mean the back office, the store room or the meeting table can carry calls. Walk the rooms with the devices people actually use.</p><h2>Write down the handover</h2><p>Someone has to know the administrator login, how a new staff member gets access, and what to do when the router is replaced. That note belongs with the business, not only with the person who installed it.</p>',
+		'trend-office-router.jpg',
+		'White wireless router with antennas and a blue network cable',
+	),
+	'customers-open-you-on-a-phone' => array(
+		'Your next customer will open you on a phone',
+		'A business site is now judged in one hand, on a small screen, often away from the desk. The phone number and the next step have to be obvious.',
+		'<p>People do not wait until they are at a computer to check a business. They open the site on a phone, look for a number, and decide quickly whether to call.</p><h2>Put the next step where the thumb is</h2><p>The phone number, WhatsApp link and quote path should be visible without a hunt. A beautiful page that hides the contact details is a brochure, not a working site.</p><h2>Keep the page light</h2><p>Large unused pictures and heavy animation make a phone work harder than it should. Type, spacing and one clear picture are enough for most service businesses.</p><h2>Use the real identity</h2><p>The colours, the logo and the address should match the business a customer already knows. This website is the standard Edgepoint builds to: sky blue, white, and a way to reach a person.</p>',
+		'trend-phone-screen.jpg',
+		'Close view of a smartphone home screen on a pale desk',
+	),
+	'check-cameras-from-the-phone' => array(
+		'Check the cameras without walking to the recorder',
+		'More sites want to see a camera from a phone. That only helps if the account, the network and the recording still work when nobody is in the building.',
+		'<p>Remote viewing is useful. It is also a door into the site. The trend is not “more cameras”. It is being able to look, and still knowing who else can look.</p><h2>Name the people who can view</h2><p>A shared password on a group chat is not an access list. Each person who can open the cameras should have their own login, and that login should be removed when they leave.</p><h2>Keep a recording, not only a live view</h2><p>A phone can show what is happening now. It does not replace a recorder that keeps the pictures when the network drops. Check that playback works, and that the recorder has power protection.</p><h2>Treat the picture as private</h2><p>Cameras see staff, customers and neighbours. Place them for the job, say that they are there, and do not point them where the business has no reason to look.</p>',
+		'trend-cameras.jpg',
+		'Rows of security cameras mounted on a grey brick wall',
+	),
+);
+
+if ( $trends_term_id > 0 ) {
+	foreach ( $trends as $slug => $trend ) {
+		if ( get_page_by_path( $slug, OBJECT, 'post' ) ) {
+			continue;
+		}
+
+		$image_id = $edgepoint_seed_trend_image( $trend[3], $trend[4], $trend_caption );
+		$post_id  = wp_insert_post(
+			array(
+				'post_type'     => 'post',
+				'post_status'   => 'publish',
+				'post_title'    => $trend[0],
+				'post_name'     => $slug,
+				'post_excerpt'  => $trend[1],
+				'post_content'  => $trend[2],
+				'post_category' => array( $trends_term_id ),
+			)
+		);
+
+		if ( ! is_wp_error( $post_id ) && $image_id > 0 ) {
+			set_post_thumbnail( $post_id, $image_id );
+		}
+	}
+}
+
 update_option( 'blogname', 'Edgepoint Internets Solutions Ltd' );
 update_option( 'blogdescription', 'Connect. Secure. Grow.' );
 update_option( 'permalink_structure', '/%postname%/' );

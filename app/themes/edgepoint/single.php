@@ -15,6 +15,13 @@ get_header();
 		<article <?php post_class( 'entry wrap wrap--reading' ); ?>>
 			<header class="entry__header">
 				<p class="entry__meta">
+					<?php
+					$edgepoint_trends = get_category_by_slug( 'trends' );
+					if ( edgepoint_is_trend() && $edgepoint_trends instanceof WP_Term ) :
+						?>
+						<a href="<?php echo esc_url( get_category_link( $edgepoint_trends ) ); ?>"><?php esc_html_e( 'Trend', 'edgepoint' ); ?></a>
+						<span aria-hidden="true"> · </span>
+					<?php endif; ?>
 					<time datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
 				</p>
 				<h1><?php the_title(); ?></h1>
@@ -23,7 +30,15 @@ get_header();
 				<?php endif; ?>
 			</header>
 			<?php if ( has_post_thumbnail() ) : ?>
-				<figure class="entry__image"><?php the_post_thumbnail( 'large' ); ?></figure>
+				<?php $edgepoint_image_id = get_post_thumbnail_id(); ?>
+				<figure class="entry__image">
+					<?php the_post_thumbnail( 'large' ); ?>
+					<?php if ( wp_get_attachment_caption( $edgepoint_image_id ) ) : ?>
+						<figcaption><?php echo esc_html( wp_get_attachment_caption( $edgepoint_image_id ) ); ?></figcaption>
+					<?php endif; ?>
+				</figure>
+			<?php elseif ( edgepoint_is_trend() ) : ?>
+				<p class="entry__lead"><?php esc_html_e( 'This trend is waiting for its picture before it is listed on Insights.', 'edgepoint' ); ?></p>
 			<?php endif; ?>
 			<div class="entry__content">
 				<?php the_content(); ?>
