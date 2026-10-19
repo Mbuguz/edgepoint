@@ -35,7 +35,7 @@ experience, or outcomes.
 - Platform and delivery model: WordPress on shared cPanel hosting; installable
   theme and companion-plugin ZIP files.
 - Geographic priorities: Kasarani, Nairobi County, Greater Nairobi, then Kenya.
-- Confirmed office wording: **Counter Business Center, Shop B08, Kasarani,
+- Confirmed office wording: **Contour Business Center, Shop B08, Kasarani,
   Nairobi**. This must still be checked against postal/map/Google Business Profile
   records before production schema or directions are published.
 - Confirmed stated service areas: Kasarani, Nairobi, Ruiru, Gwakairu, and surrounding
@@ -62,7 +62,7 @@ experience, or outcomes.
 - Primary telephone/WhatsApp numbers, monitored email addresses, business hours,
   and quotation recipient(s).
 - Map coordinates, postal format, customer access details, and Google verification
-  for the confirmed Counter Business Center office.
+  for the confirmed Contour Business Center office.
 - Actual service area and travel constraints. Kasarani targeting must describe a
   genuine service area, not imply an unverified office.
 - Google Business Profile ownership, canonical name/address/phone data, and profile
