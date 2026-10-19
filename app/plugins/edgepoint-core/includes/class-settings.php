@@ -33,7 +33,7 @@ final class Edgepoint_Core_Settings {
 			'name'         => 'Edgepoint Internet Solutions Ltd',
 			'phone'        => '0754 931 100',
 			'email'        => 'edgepointinternet@gmail.com',
-			'address'      => 'Counter Business Center, Shop B08, Kasarani, Nairobi',
+			'address'      => 'Contour Business Center, Shop B08, Kasarani, Nairobi',
 			'service_area' => 'Kasarani, Nairobi, Ruiru, Gwakairu and the surrounding Nairobi metropolitan area',
 			'hours'        => '24/7',
 			'quote_email'  => 'edgepointinternet@gmail.com',

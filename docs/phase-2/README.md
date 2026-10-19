@@ -3,7 +3,7 @@
 ## Confirmed inputs
 
 - Display name: **Edgepoint Internet Solutions Ltd**
-- Office: **Counter Business Center, Shop B08, Kasarani, Nairobi**
+- Office: **Contour Business Center, Shop B08, Kasarani, Nairobi**
 - Service planning area: Kasarani, Nairobi, Ruiru, Gwakairu, and surrounding
   Nairobi metropolitan areas
 - Stated availability: 24/7, pending a verified monitored contact channel and
