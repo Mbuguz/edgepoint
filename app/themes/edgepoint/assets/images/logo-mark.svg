@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Edgepoint Internet Solutions Ltd</title>
+  <defs>
+    <linearGradient id="signal" x1="9" y1="8" x2="55" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63d8e6"/>
+      <stop offset="1" stop-color="#0787d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="17" fill="#071b2b"/>
+  <path d="M18 19h28M18 32h21M18 45h28" fill="none" stroke="url(#signal)" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="46" cy="32" r="5" fill="#fff"/>
+</svg>
