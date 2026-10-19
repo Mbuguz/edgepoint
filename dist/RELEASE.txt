@@ -1,6 +1,6 @@
 Edgepoint Internet Solutions Ltd preview release
 Version: 0.1.0
-Commit: 30faec2
+Commit: 55afd3b
 Mode: PREVIEW ONLY
 
 The phone number, email, social profiles, legal copy, form recipient and final
