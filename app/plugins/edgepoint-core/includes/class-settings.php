@@ -18,9 +18,70 @@ final class Edgepoint_Core_Settings {
 	 * @return void
 	 */
 	public static function init() {
+		self::correct_business_center_name();
 		add_action( 'admin_menu', array( __CLASS__, 'add_page' ) );
 		add_action( 'admin_init', array( __CLASS__, 'register' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'demo_notice' ) );
+	}
+
+	/**
+	 * Correct the former office-name typo in saved settings and page content.
+	 *
+	 * @return void
+	 */
+	private static function correct_business_center_name() {
+		if ( 'contour-2026-10' === get_option( 'edgepoint_location_spelling_version' ) ) {
+			return;
+		}
+
+		$old_name = 'Counter Business Center';
+		$new_name = 'Contour Business Center';
+		$details  = get_option( 'edgepoint_business_details', array() );
+
+		if ( is_array( $details ) && isset( $details['address'] ) ) {
+			$details['address'] = str_replace( $old_name, $new_name, (string) $details['address'] );
+			update_option( 'edgepoint_business_details', $details );
+		}
+
+		global $wpdb;
+
+		$encoded_old = rawurlencode( $old_name );
+		$encoded_new = rawurlencode( $new_name );
+		$like_plain  = '%' . $wpdb->esc_like( $old_name ) . '%';
+		$like_url    = '%' . $wpdb->esc_like( $encoded_old ) . '%';
+		$post_ids    = $wpdb->get_col(
+			$wpdb->prepare(
+				"SELECT ID FROM {$wpdb->posts} WHERE post_content LIKE %s OR post_content LIKE %s",
+				$like_plain,
+				$like_url
+			)
+		);
+
+		foreach ( $post_ids as $post_id ) {
+			$post = get_post( $post_id );
+			if ( ! $post ) {
+				continue;
+			}
+
+			$content = str_replace(
+				array( $old_name, $encoded_old ),
+				array( $new_name, $encoded_new ),
+				$post->post_content
+			);
+
+			if ( $content !== $post->post_content ) {
+				wp_update_post(
+					wp_slash(
+						array(
+							'ID'           => $post->ID,
+							'post_content' => $content,
+						)
+					)
+				);
+			}
+		}
+
+		update_option( 'edgepoint_location_spelling_version', 'contour-2026-10' );
 	}
 
 	/**
