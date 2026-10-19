@@ -30,6 +30,15 @@ These are demonstrative images, not photographs of Edgepoint employees, customer
 offices, or completed projects. Replace them with approved authentic project
 photography when available.
 
+## Edgepoint completed-project photographs
+
+- Files: `assets/images/completed-structured-cabling.jpg` and
+  `assets/images/completed-wireless-tower.jpg`
+- Optimized derivatives: matching `.webp` files
+- Source: supplied by Edgepoint
+- Description: completed structured-cabling and wireless-infrastructure work
+- Usage: approved by Edgepoint for this website
+
 ## Manrope variable font
 
 - File: `assets/fonts/manrope-latin.woff2`
