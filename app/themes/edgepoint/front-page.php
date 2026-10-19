@@ -337,25 +337,25 @@ $capabilities = array(
 			<div class="work-pair" data-reveal>
 				<figure class="work-pair__main">
 					<picture>
-						<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-structured-cabling.webp' ); ?>" type="image/webp">
+						<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/completed-structured-cabling.webp' ); ?>" type="image/webp">
 						<img
-							src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-structured-cabling.jpg' ); ?>"
-							width="1600"
-							height="1200"
+							src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/completed-structured-cabling.jpg' ); ?>"
+							width="1080"
+							height="1442"
 							loading="lazy"
-							alt="<?php esc_attr_e( 'Network switch and structured cabling installed on a white wall', 'edgepoint' ); ?>"
+							alt="<?php esc_attr_e( 'Completed network rack with neatly routed green and white structured cabling', 'edgepoint' ); ?>"
 						>
 					</picture>
 				</figure>
 				<figure class="work-pair__accent">
 					<picture>
-						<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-cctv-install.webp' ); ?>" type="image/webp">
+						<source srcset="<?php echo esc_url( get_template_directory_uri() . '/assets/images/completed-wireless-tower.webp' ); ?>" type="image/webp">
 						<img
-							src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/work-cctv-install.jpg' ); ?>"
-							width="900"
-							height="1200"
+							src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/completed-wireless-tower.jpg' ); ?>"
+							width="1080"
+							height="1440"
 							loading="lazy"
-							alt="<?php esc_attr_e( 'Two outdoor cameras mounted on a dark exterior wall', 'edgepoint' ); ?>"
+							alt="<?php esc_attr_e( 'Completed telecommunications tower with installed wireless antennas', 'edgepoint' ); ?>"
 						>
 					</picture>
 				</figure>
